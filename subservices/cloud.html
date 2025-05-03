@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Cloud Computing</title>
+    <style>
+      nav {
+        width: 400%;
+      }
+      body {
+        height: 2000px;
+      }
+      header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+      }
+      #products {
+        padding: 5rem 5rem 0 0;
+      }
+      .section-toggler {
+        display: none;
+      }
+      .simple-list-example {
+        position: sticky;
+        top: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .col-4 {
+          width: 100%;
+        }
+        #products {
+          padding: 1rem;
+        }
+        .simple-list-example {
+          position:relative;
+        }
+        .col-8 {
+          padding: 1rem;
+          margin: 0;
+          width: 100%;
+        }
+        .row {
+          padding: 0;
+          margin: 0;
+          justify-items: center;
+          align-items: center;
+          width: 100%;
+        }
+        .scrollspy-example {
+          width: 100%;
+          margin: auto;
+          justify-items: center;
+        }
+        .section-toggler {
+          display: block;
+        } 
+        nav {
+          z-index: 10000000;
+          width: auto;
+        }
+        #SectionDropdown h2 {
+          margin-top: 2.5rem;
+        }
+      }
+  </style>
+      <script>
+        window.onscroll = function(e) {
+          var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+          var header = document.querySelector('#service-header');
+    
+          scrollY <= this.lastScroll
+          ? header.style.visibility = 'visible'
+          : header.style.visibility = 'hidden';
+    
+          this.lastScroll = scrollY ;
+        }
+      </script>
+</head>
+<body>
+    <header id="service-header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">Tyronnes <span style="font-weight: 700;">Services</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#SectionDropdown2" aria-controls="#SectionDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../service.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="networking.html">Networking</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="os.html">Operating Systems</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="hardware.html">Hardware</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cloud Computing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="scripting.html">Scripting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="security.html">Security</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="SectionDropdown2">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-1">Cloud-Computing Concepts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-2">Client-side Virtualization</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <article id="security-products">
+            <section id="products">
+                <div class="row">
+                    <div class="col-4" id="SectionDropdown1">
+                        <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+                        <h2>Cloud</h2>
+                        <a class="p-1 rounded" href="#simple-list-item-1">Cloud-Computing Concepts</a>
+                        <a class="p-1 rounded" href="#simple-list-item-2">Client-side Virtualization</a>
+                    </div>
+                    </div>
+                    <div class="col-8">
+                    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <br>
+                        <h4 id="simple-list-item-1">Cloud-Computing Concepts</h4>
+                        <h5>Cloud-Computing</h5>
+                        <p>
+                          A model for enabling convenient on demand network access to a shared pool of
+                          configurable computing resources, for example networks, servers, storage,
+                          applications, and services. Additionally, these resources can be rapidly
+                          provisioned and released with minimal management, effort, or service provider interaction. In simpler terms cloud
+                          computing refers to using remote servers on the internet to store, manage, and
+                          process data rather than relying on a local server or personal computer. To
+                          assist with understanding this concept I will compare cloud computing to renting a storage unit instead of needing to
+                          build and maintain your own storage space at home which would require a lot of effort and resources. You can simply
+                          rent a storage unit from a company similarly with cloud computing, instead
+                          of setting up and maintaining your own servers and infrastructure you can use remote servers provided by cloud service
+                          providers like Amazon Web Services, Microsoft Azure, or Google Cloud platform,
+                          it's like outsourcing the storage and management of your data and computing resources to a specialized company that
+                          takes care of everything for you. With cloud computing there are
+                          various Cloud models that exist, among these cloud models are Public Cloud,
+                          Private Cloud, Hybrid Cloud, and Community Cloud. Each model presents distinct
+                          characteristics and benefits tailored to address specific requirements and challenges.
+                        </p>
+                        <ul>
+                          <h6>Private Cloud</h6>
+                          <p>Owned and
+                            operated by third-party providers, offers scalable resources on demand making it
+                            suitable for a wide range of applications and workloads. A Private Cloud
+                            offers dedicated infrastructure solely for one organization ensuring enhanced
+                            control and security over data and applications. This isolation from others
+                            minimizes the risk of unauthorized access and data breaches with complete
+                            control over data management, compliance with regulatory requirements, and internal policies is ensured. Private
+                            Clouds also guarantee reliability and availability maintaining access even
+                            during local internet outages. The limited attack surface increases security making Private Clouds ideal for
+                            storing sensitive information.
+                          </p>
+                          <h6>Public Cloud</h6>
+                          <p>With a Public Cloud organizations can access computing
+                            resources such as servers, storage, and applications over the internet without
+                            needing to invest in or maintain their own infrastructure. This model allows for
+                            flexibility and agility as resources can be provisioned or scaled up and down
+                            quickly based on demand. Additionally, Public Cloud providers handle tasks such
+                            as infrastructure management, security, and maintenance relieving organizations
+                            of these responsibilities and allowing them to focus on their core business activities.
+                          </p>
+                          <h6>Hybrid Cloud</h6>
+                          <p>Blend Public and Private Cloud
+                            features providing flexibility in workload deployment and data storage.
+                            Organizations can host sensitive data onsite while utilizing the scalability
+                            of Public Cloud resources for other tasks, this integration enables seamless
+                            data movement between environments optimizing resource utilization based on
+                            performance security and cost considerations. Overall Hybrid Clouds
+                            offer a versatile solution for organizations seeking to balance control, security, scalability, and cost
+                            effectiveness in their IT infrastructure.
+                          </p>
+                          <h6>Community Cloud</h6>
+                          <p>Serve a defined group of organizations with shared interests or requirements fostering collaboration while maintaining
+                            autonomy and control.
+                          </p>
+                        </ul>
+                          <i>These various cloud computing models empower organizations
+                          to tailor their IT infrastructure to align with their unique objectives, regulatory constraints, and operational
+                          needs.</i>
+
+                        <h5>Cloud Characteristics</h5>
+                        <p>These characteristics including shared
+                          resources, metered utilization, rapid elasticity, high availability, and file
+                          synchronization, collectively contribute to the efficiency, reliability, and accessibility of cloud
+                          services. Understanding these fundamental aspects is essential for organizations
+                          seeking to leverage the full potential of cloud computing and their operations.
+                          <ul>
+                            <h6>Shared Resources</h6>
+                            <p>The pooling of computing resources such as servers, storage, and networking to serve
+                              multiple users or tenants, that is probably why this is also known as resource pooling. These pulled resources
+                              are dynamically allocated and reassigned according to demand. In cloud computing
+                              shared resources enable efficient utilization of infrastructure as multiple users can access and utilize
+                              the same physical resources, this pooling of resources allows for cost savings
+                              scalability and optimization of resource utilization.
+                            </p>
+                            <h6>Metered Utilization</h6>
+                            <p>The capability of cloud computing systems to
+                              measure and charge only for resources that are used, this provides transparency
+                              and accountability for both providers and consumers. Usage is typically measured on a pay as you go basis. Cloud
+                              service providers track resource consumption by users allowing them to charge based on actual usage this pay as
+                              you go model allows organizations to optimize resource allocation and
+                              budgeting based on their actual needs.
+                            </p>
+                            <h6>Rapid Elasticity</h6>
+                            <p>The ability of
+                              cloud computing systems to scale resources up or down quickly and automatically and response to changing
+                              demand, this scalability is often achieved through the dynamic provisioning and deprovisioning of
+                              resources. Cloud environments can rapidly scale resources to accommodate fluctuations in workload demand such as
+                              adding resources during the peak usage times and automatically removing it when the peak is over, for example with an
+                              e-commerce website more web servers can be quickly added to handle increased
+                              traffic. Overall rapid elasticity enables cloud systems to be provisioned
+                              according to demand allowing organizations to efficiently manage their resources and adapt to changing
+                              workload requirements without manual intervention.
+                            </p>
+                            <h6>High Availability</h6>
+                            <p>The ability of cloud computing systems to ensure that services and resources are
+                              accessible and operational for users when needed, typically through redundancy and fault tolerance. Cloud providers
+                              implement redundancy and fault tolerance across their infrastructure to minimize
+                              downtime and ensure continuous availability of services, this includes
+                              measures to prevent a single point of failure ensuring that if one component fails redundant systems can immediately
+                              take over without interrupting service. Additionally, cloud environments can quickly fall over to another server data
+                              center or region in the event of an outage further enhancing availability and resilience. These fall over mechanisms
+                              provide organizations with confidence in relying on cloud services for critical operations knowing that their
+                              applications and data will remain accessible even in the face of hardware
+                              failures or maintenance activities.
+                            </p>
+                            <h6>File Synchronization</h6>
+                            <p>The process of ensuring that files and data are consistently updated and mirrored across
+                              multiple devices or locations allowing users to access the latest versions of
+                              files from any device or location. Cloud storage services often include file
+                              synchronization capabilities allowing users to sync files across devices
+                              and access them from anywhere with an internet connection, this facilitates collaboration, data sharing, and remote
+                              access to files improving productivity and efficiency for users and
+                              organizations.</p>
+                          </ul>
+                        </p>
+
+                        <h5>Cloud Service Types</h5>
+                        <p>
+                          <ul>
+                            <h6>IaaS</h6>
+                            <p>as the foundational layer it grants
+                              organizations access to fundamental Computing resources like servers storage
+                              and networking infrastructure here users have the autonomy to build and manage
+                              their virtual machines and networks remotely allowing for seamless scalability according to demand is
+                              liberates businesses from from the burden of investing in costly hardware and alleviates the complexities of
+                              Maintenance providing a flexible environment for building and hosting their data and
+                              applications.
+                            </p>
+                            <h6>PaaS</h6>
+                            <p>elevates cloud computing by offering a comprehensive
+                              software development and deployment environment imagine pass as a streamlined construction site where
+                              software developers are empowered to build and deploy applications without worrying about the under lying
+                              infrastructure past platforms abstract away the intricacies of configuring servers and managing networking
+                              resources enabling software developers to focus solely on coding this model
+                              accelerates the development life cycle fostering rapid application delivery and
+                              facilitating collaboration among development teams.
+                            </p>
+                            <h6>Saas</h6>
+                            <p>SAS can be
+                              likened to a fully furnished home where users simply consume ready made applications over the Internet with SAS
+                              organizations can access a plethora of software applications from productivity Suites to customer relationship
+                              Management Systems via web browsers or dedicated clients this consumption based
+                              model eliminates the need for installation maintenance or updates providing unparalleled convenience and
+                              accessibility for users.
+                            </p>
+                          </ul>
+                          <!-- IM HERE -->
+                          in essence cloud services Empower organizations to
+                          Leverage modern Computing Technologies while minimizing operational overhead
+                          and capital expenditures whether it's the flexibility of is the agility of
+                          pass or the convenience of SAS cloud computing serves as a catalyst for
+                          Innovation collaboration and business growth in today's digital
+                          landscape 
+                          
+                          moving forward with this topic you should also understand how responsibility is shared between users
+                          and cloud service providers across different service types in managing a cloud environment this shared
+                          responsibility encompasses various components including the data center networking storage servers
+                          virtualization operating system data and applications for infrastructure as a
+                          service users bear more responsibility for managing the operating system
+                          applications and data the cloud provider handles infrastructure related tasks
+                          such as data center management networking storage server maintenance and virtualization Management in
+                          platform as a service the cloud provider takes a more responsibility for managing
+                          the underlying infrastructure by including the operating system users are
+                          primarily responsible for developing deploying and managing their applications in Deb with software as a
+                          service the cloud provider assumes the majority of responsibility in including managing the entire stack from
+                          infrastructure to Applications users are typically responsible for configuring the application settings and managing
+                          user access this division of responsibility allows users to focus on
+                          their core business functions while leveraging the expertise and resources of the cloud service provider by
+                          understanding the shared responsibilities across different service types organizations can effectively manage their Cloud
+                          environments and Max maximize the benefits of cloud computing.
+                        </p>
+
+                        <h5>Desktop Virtualization</h5>
+                        <p>Fundamentally changes how we interact
+                          with computers by decoupling or separating the content displayed on your screen from the physical hardware of the
+                          machine itself. Picture a scenario where your computer's operating system, all
+                          the applications you use, and your files are not stored directly on your device,
+                          instead they reside on a server that's accessible over a network connection,
+                          this means that regardless of the device you're using or where you are you can access your desktop environment with all
+                          your familiar applications and files intact. This paradigm shift embodies the
+                          core of desktop virtualization providing unmatched flexibility, accessibility, and
+                          convenience in our technological interactions.
+                        </p>
+                        <p>
+                          Virtual Desktop
+                          Infrastructure or VDI takes this concept further, I will be simplifying this concept down to three main parts the client, the server, and the virtual
+                          machines that house our virtual desktops.
+                        </p>
+                        <ul>
+                          <h6>The Client</h6>
+                          <p>is your computer or device
+                            that you use to connect to the virtual machine it could be a laptop, workstation,
+                            or even a tablet or smartphone.
+                          </p>
+                          <h6>The Server</h6>
+                          <p>The server is the central hub that stores and manages all the virtual machine
+                            setups. This server can be local referred to as on premises or located in the
+                            cloud.
+                          </p>
+                          <h6>Virtual Machines</h6>
+                          <p>Then there are the virtual machines which house our virtual desktops these virtual machines reside
+                            on the server and are controlled by a special piece of software known as a type 1 hypervisor. With VDI each user
+                            will have their own virtual machine complete with an operating system, applications, and their personal files.
+                            Just imagine each virtual machine as a personalized workspace tailor made for
+                            each user.
+                          </p>
+                          <p>Together these components form the backbone of
+                            VDI.
+                          </p>
+                        </ul>
+                        <h6>How a connection works</h6>
+                        <p>
+                          Imagine you're at home
+                          or in the office and need to do some work:
+                        </p>
+                        <ol>
+                          <li>You grab your laptop which acts as
+                            the client device and turn it on.
+                          </li>
+                          <li>Now it is time to connect to the server to do this you would open up a program
+                            or website on your laptop designed to connect you to your virtual desktop, this program acts like a special door that
+                            takes you to your virtual desktop.
+                          </li>
+                          <li>Next the program will prompt you to enter your username and password once you do
+                            it knows who you are and where to take you. The program then communicates with the server saying hey someone wants to
+                            use their virtual desktop can you help them out the server, looks up your details and locates the virtual machine
+                            that contains your virtual desktop, the server says sure thing and sets up a
+                            special connection just for you.
+                          </li>
+                          <i>and that's how a connection works in VDI it's like having your personal computer
+                            stored remotely that is available whenever you need it. Some of its benefits:
+                          </i>
+                        </ol> 
+                        <ul>
+                          <li>VDI provides agility by
+                            allowing clients and virtual desktops to be easily initiated and terminated from
+                            the virtual desktop infrastructure.
+                          </li>
+                          <li>Additionally, it centralizes desktop
+                            management leading to increased productivity.
+                          </li>
+                          <li>Furthermore, VDI enhances
+                            security by centralizing data and applications granting companies remote control over users operating systems and
+                            enabling strict access controls.
+                          </li>
+                        </ul>
+                        <i>With VDI you get all these benefits and more
+                          while also reducing operational costs.
+                        </i>
+
+                        <br>
+                        <h4 id="simple-list-item-2">Client-side Virtualization</h4>
+                        <h5>Client-side Virtualization</h5>
+                        <p>As previously discussed
+                          desktop virtualization and the virtual desktop infrastructure involves hosting
+                          desktop environments on remote servers, in this model the desktop environment
+                          including the operating system applications and user data resides centrally on a server and is accessed by
+                          a user's client device over a network connection. While this works great for
+                          many use cases we do have another virtualization option this option is
+                          called client side virtualization and it involves running virtual machines
+                          directly on the end user device in this model A type 2 hypervisor
+                          or virtualization software is installed on the client device not a remote server
+                          allowing users to create and run multiple virtual machines concurrently.
+                          Each virtual machine operates as an isolated environment with its own operating system and applications
+                          enabling users to run different operating systems or experiment with software configurations without
+                          affecting the host system. 
+                        </p>
+                        <h6>What client side virtualization might look like?</h6>
+                        <p>
+                          Behind me I have a laptop which will be referred to as the host device in this client side virtualization setup. This
+                          device has physical hardware such as a CPU, memory, storage, and a network
+                          connection. This host device also has an operating system installed on it. So far
+                          this setup is just like any other until I install a type 2 hypervisor application, once I do that I unlock the
+                          power of client side virtualization. With a type 2 hypervisor installed on the
+                          host OS I can create and control virtual machines complete with their own
+                          isolated operating systems, applications, and data files. Each virtual machine will
+                          also be allocated a configurable portion of the host machines physical resources
+                          with which to use while you can configure the virtual machine with as little or as much resources as you would
+                          like, just make sure to save enough resources for the host
+                          OS.
+                        </p>
+                        <p>Client side virtualization provides a versatile solution for
+                          various use cases.
+                        </p>
+                        <ol>
+                          <li>It can serve as a sandbox environment allowing users
+                            to create isolated virtual machines for testing new software experimental code
+                            or conducting system experiments without impacting their primary operating environment, this ensures that any
+                            potential issues or conflicts are contained within the virtual environment minimizing risks to the host system.
+                          </li>
+                          <li>Additionally, client side virtualization is invaluable for software development
+                            and testing enabling developers to replicate different operating systems, hardware configurations, or network
+                            setups for comprehensive testing and validation of applications. Furthermore, it facilitates
+                            the virtualization of Legacy software or operating systems enabling
+                            organizations to continue using outdated applications without the need for dedicated Legacy
+                            hardware.
+                          </li>
+                          <li>Lastly client side virtualization supports cross-platform development and testing by allowing
+                            users to create virtual machines with different operating systems ensuring
+                            seamless performance across diverse platforms.
+                          </li>
+                        </ol>
+                        <i>Overall, client side virtualization enhances productivity,
+                          streamlines testing processes, and overcomes compatibility challenges in software development and
+                          deployment.
+                        </i>
+
+                        <h5>Hypervisor</h5>
+                        <p>
+                          The software that makes virtualization possible, a hypervisor is
+                          a software layer that allows multiple operating systems to run on a single physical hardware platform
+                          simultaneously. It accomplishes this by dividing up the computer's resources like its processing power, memory, and
+                          storage so that different programs or operating systems can run on it without getting in each other's
+                          way.
+                        </p>
+                        <h6>Type 1 and Type 2 Hypervisor</h6>
+                        <ol>
+                          <li>type 1 hypervisors also known
+                            as bare metal hypervisors operate directly on the host Hardware without
+                            requiring an underlying operating system they have direct access to physical resources offering high performance and
+                            efficiency which makes them suitable for Enterprise environments and data centers where virtualizing servers is common
+                            practice.
+                          </li>
+                          <li>type 2 hypervisors also known as hosted hypervisors run as
+                            applications on top of conventional operating systems like Windows Mac OS or
+                            Linux they rely on the underlying operating system to manage Hardware resources and provide services to
+                            Virtual machines type two hypervisors are often used for client side
+                            virtualization.
+                          </li>
+                        </ol>
+                        <p>
+                          The primary distinction between type 1 and type 2 hypervisors
+                          lies in their architecture and how they interact with hardware. With type 1 offering Superior performance and
+                          scalability for larger scale virtualization deployments. While type 2
+                          is more suitable for smaller scale or individual virtualization
+                          needs. 
+                        </p>
+                        <p>
+                          After you install a hypervisor you can open up its user interface and begin
+                          to create startup, shut down, and terminate any number of virtual machines.
+                        </p>
+                        <p>
+                          You will also have the ability to control resource allocations to each instance including the amount of memory
+                          or Ram, the number of CPU
+                          cores, you can even set up various types of networking
+                          capabilities.
+                        </p>
+                          <h6>Virtualization Security</h6> 
+                          <p>When it comes to
+                          securing virtualized environments several measures can be taken.
+                          <ol>
+                            <li>limit the ability to create virtual machines all together
+                              disabling virtualization in the Bios or ufi settings is a security measure used
+                              to prevent unauthorized or un intended virtual machine creation and execution
+                              on a system.
+                            </li>
+                            <li>A virtual trusted platform module or
+                              vtpm this technology is used in virtualized environments to provide security functions similar to a physical
+                              TPM the virtual trusted platform module enables the creation and management of a
+                              virtual TPM instance within virtual machines allowing them to benefit from
+                              TPM functionality with without requiring physical TPM Hardware this technology
+                              enhances security by enabling features such as secure Boot and Hardware based
+                              encryption within the guest operating system.
+                            </li>
+                            <li>The primary security concern facing a virtualized environment is an attack known as virtual machine escape.
+                              This is a security vulnerability in virtualized environments where an attacker gains unauthorized access to
+                              the host system or hypervisor from within a guest virtual machine. This
+                              exploit allows the attacker to break out of the confines of the virtual machine and execute malicious code or access
+                              sensitive information on the host system. Virtual machine Escape vulnerabilities
+                              pose a significant security risk as they can potentially compromise the integrity and security of the entire virtualized
+                              environment.
+                            </li>
+                          </ol>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</html>

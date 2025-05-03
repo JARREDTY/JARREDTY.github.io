@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Security</title>
+    <style>
+      nav {
+        width: 400%;
+      }
+      body {
+        height: 2000px;
+      }
+      header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+      }
+      #products {
+        padding: 5rem 5rem 0 0;
+      }
+      .section-toggler {
+        display: none;
+      }
+      .simple-list-example {
+        position: sticky;
+        top: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .col-4 {
+          width: 100%;
+        }
+        #products {
+          padding: 1rem;
+        }
+        .simple-list-example {
+          position:relative;
+        }
+        .col-8 {
+          padding: 1rem;
+          margin: 0;
+          width: 100%;
+        }
+        .row {
+          padding: 0;
+          margin: 0;
+          justify-items: center;
+          align-items: center;
+          width: 100%;
+        }
+        .scrollspy-example {
+          width: 100%;
+          margin: auto;
+          justify-items: center;
+        }
+        .section-toggler {
+          display: block;
+        }
+        nav {
+          z-index: 10000000;
+          width: auto;
+        }
+        #SectionDropdown h2 {
+          margin-top: 2.5rem;
+        }
+      }
+  </style>
+    <script>
+      window.onscroll = function(e) {
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var header = document.querySelector('#service-header');
+  
+        scrollY <= this.lastScroll
+        ? header.style.visibility = 'visible'
+        : header.style.visibility = 'hidden';
+  
+        this.lastScroll = scrollY ;
+      }
+    </script>
+</head>
+<body>
+    <header id="service-header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">Tyronnes <span style="font-weight: 700;">Services</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#SectionDropdown2" aria-controls="#SectionDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../service.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="networking.html">Networking</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="os.html">Operating Systems</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="hardware.html">Hardware</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cloud.html">Cloud Computing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="scripting.html">Scripting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Security</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="SectionDropdown2">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-1">Security Measures & Purposes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-2">Wireless Security Protocols and Authentication</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-3">Malware Detection, Removal & Prevention</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-4">Social-Engineering Attacks & Threats</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-5">Security Settings in Windows OS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-6">Workstation Configuration for Security</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-7">Mobile & Embedded Device Security</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-8">Data Destruction & Disposal Methods</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-9">Security Settings in SOHO Networks</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-10">Browsers & Relevant Security Settings</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <article id="security-products">
+            <section id="products">
+                <div class="row">
+                    <div class="col-4" id="SectionDropdown1">
+                        <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+                          <h2>Security</h2>
+                            <a class="p-1 rounded" href="#simple-list-item-1">Security Measures & Purposes</a>
+                            <a class="p-1 rounded" href="#simple-list-item-2">Wireless Security Protocols and Authentication</a>
+                            <a class="p-1 rounded" href="#simple-list-item-3">Malware Detection, Removal & Prevention</a>
+                            <a class="p-1 rounded" href="#simple-list-item-4">Social-Engineering Attacks & Threats</a>
+                            <a class="p-1 rounded" href="#simple-list-item-5">Security Settings in Windows OS</a>
+                            <a class="p-1 rounded" href="#simple-list-item-6">Workstation Configuration for Security</a>
+                            <a class="p-1 rounded" href="#simple-list-item-7">Mobile & Embedded Device Security</a>
+                            <a class="p-1 rounded" href="#simple-list-item-8">Data Destruction & Disposal Methods</a>
+                            <a class="p-1 rounded" href="#simple-list-item-9">Security Settings in SOHO Networks</a>
+                            <a class="p-1 rounded" href="#simple-list-item-10">Browsers & Relevant Security Settings</a>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        
+                      <br>
+                        <h3 id="simple-list-item-1">Security Measures & Their Purposes</h3>
+                        <p></p>
+                        
+                        <br>
+                        <h5>Physical Security Measures</h5>
+                        <ul>
+                          <li><b>Equipment Locks</b> - a security device that physically secures equipment  to prevent unauthorised removal or theft.</li>
+                          <li><b>Boulards</b> - ensures vehicles maintain a specific distance away from the building.</li>
+                          <li><b>Fences</b> - blocks of pedestrians from entering property.</li>
+                          <li><b>Access Control Vestibules</b> - a secure entry system with two gateways, only one of which is open at any one time.</li>
+                          <li><b>Surveilence</b> - using cameras to monitor and record activities in and around a facility.</li>
+                          <li><b>Security Guards</b> - trained professional responsible for protecting assets, monitoring for suspect activity, and responding to security incidents.</li>
+                          <li><b>Door Locks</b> - a mechanical or electronic device used to secure a door and restrict access to unauthorised individuals.</li>
+                          <li><b>Badge Reader</b> - a device that verifies an individuals identity by scanning their ID badges before granting access to restricted areas.</li>
+                          <li><b>Alarm Systems</b> - a security measure that triggers a response when unauthorised access is detected.</li>
+                          <!-- <li><b>RFID</b> - includes smart cards, key fobbs</li> -->
+                        </ul>
+                        
+                        <br>
+                        <h5>Physical Security for Staff, customers, visitors</h5>
+                        <ul>
+                          <li><b>Keys</b> - a mechanical device that physically opens locks, granting access to doors, cabinets, and other secured areas.</li>
+                          <li><b>Key Fob</b> - a small electronic device that commmunicates with a reader to grant access to a secured area</li>
+                          <li><b>Smart cards</b> - a card embedded with an integrated circuit that can store and process data</li>
+                          <li><b>Biometric</b> - using unique physical characteristics to verify identity.</li>
+                          <li><b>Lighting</b> - making it harder for intruders hide in shadows</li>
+                          <li><b>Motion Sensors</b></li>
+                          <li><b>Magnetometer</b> - a device that detects the presence of metal by sensing the magnetic fields generated by metallic objects.</li>
+                        </ul>
+
+                        <br>
+                        <h5>Logical Security</h5>
+                        <p>The protection of an organisation's data and systems through software-based measures.</p>
+                        <p>The principle of least privileged is a foundational concept in Logical seurity that involves giving users or systems only the permissions they need to perform a task or job function an nothing more.</p>
+                        <ul>
+                          <li><b>Access Control List (ACL)</b> - a set of rules that specify the rights or privileges granted to users or systems. This includes an access list to objects such as files, directories, or network resources, along with details as to what operations can be performed on those objects.</li>
+                          <li><b>Multifactor Authentication (MFA)</b> - requiring two or more forms of authentication conforming to multiple authetication factors in order to verify your identity. Can involve a combination of elements such as "Something you know" - password, "Something you have" - such as a smart card or mobile device receiving a code, "Something you are" - like a fingerprint or retina scan, and "Somewhere you are".</li>
+                          <ul>
+                            <li><b>Email Token</b> - a code or link is sent to your email address.</li>
+                            <li><b>Hard Token</b> - a physical device that generates a unique, time-sensitive code.</li>
+                            <li><b>Soft Token</b> - a software application that generates a unique, time-sensitive code.</li>
+                            <li><b>SMS Token</b> - a one-time passcode is sent to a user's mobile phone via text message.</li>
+                            <li><b>Voica Call Token</b> - a one-time passcode is delivered through a phone call.</li>
+                          </ul>
+                        </ul>
+                        
+                        <br>
+                        <h5>Mobile Device Management (MDM)</h5>
+                        <p>A Technology that allows IT administrators to control, secure, and enforce policies on mobile devices.</p>
+                        <p>A critical software component focused on the administration and oversight of the mobile devices themselves ensuring that each device adheres to the enterprises security requirements.</p>
+                        <p>Enables the centralized management of device settings ensuring that all mobile devices are configured to the organisation's standards.</p>
+                        <p><i>eg. configuring corporate email accounts to use encrypted protocols only.</i></p>
+                        <p>It also allows for the monitoring and enforcement of compliance, like requiring (TFA) as well as the ability to remotely lock, erase or wipe the contents of a device that is lost or stolen, thereby protecting sensitive corporate information.</p>
+                        <p>security features that MDM solutions provide that keep your organisations data safe:</p>
+                        <ul>
+                          <li>The ability to prevent a mobile device from being Rooted or Jailbroken</li>
+                          <i>Rooting or Jailbreaking a device removes the built-in security restrictions allowing unauthorised access to the mobile devices operating system, this could potentially expose sensitive corporate data or allow malicious applications to bypass security measures.</i>
+                          <li>With MDM, IT admins can detect if a mobile device has been Rooted or Jailbroken and take immediate action such as restricting access to corporate resources or wiping the device to prtoect data.</li>
+                          <li>The ability to block the installation of third party applications by restricting which apps can be installed on mobile devices - <i>ensuring only approved and trusted applications are used.</i></li>
+                        </ul>
+                        
+                        <br>
+                        <h5>Active Directory</h5>
+                        <p><b>Domain</b> - a network model where one or more servers (domain controllers) manage all computers, users, and security within the network centrally.</p>
+                        <p><b>Active Directory (AD)</b> - a database service, developed by Microsoft, that help you organize and manage resources, users, and devices within a domain. It allows administrators to create and manage user accounts, setup permissions and enforce security policies.</p>
+                        <i>Active directory serves as the backbone for managing the entire network within a domain.</i>
+                        <br>
+                        <br>
+                        <h6>Fundamental concepts of an object:</h6>
+                        <p>Everything than can be managed within a network is considered an object. Objects include:</p>
+                        <ul>
+                          <li><b>Users</b> - Most common type of object in AD (a user object represents an individual user within the network... Containing all the information relevant to that user such as their contact details, username, password, and permissions.)</li>
+                          <i>when a user logs-in to the network, AD verifies their identity using the credentials stored within their user object and then grants them access to the resources they're authorized to use.</i>
+                          <li><b>Computers</b></li>
+                          <li><b>Printers</b></li>
+                          <li><b>Shared Folders</b></li>
+                          <li><b>Security Groups</b></li>
+                        </ul>
+                        <i>Each object in active directory is represented in the directory as a unique entity with its own set of attributes, such as name, permissions, and other settings.</i>
+                        <br>
+                        <br>
+
+                        <h6>Specific components of AD:</h6>
+                        <ul>
+                          <p><b>Login Script</b> - a set of commands that run automatically when a user logs into a domain, typically mapping network drives, printers, and other resources. If a user cannot connect to any network drives it often signals that the login script has failed possibly due to network issues or misconfigurations.</p>
+                          <p>
+                            <b>Group Policy</b> - a feature that allows administrators to control and configure operating system settings and user environments across all objects in a domain.
+                          </p>
+                          <i>GP can ensure all Workstations have the same network drives, printers, and configurations, enforce password length requirements, or even modify the default homepage for all the workstations in a company.</i>
+                          <br>
+                          <br>
+  
+                          <p><b>Organisational Units (OU)</b> - acting as containers within a domain that help organize users, groups, computers, and other resources by placing different objects into OUs, admins can apply specific policies to different departments or groups within the organization providing a more granular level of control.</p>
+                          <p><b>Home Folder</b> - a personal folder assigned to a user where they can store files rather than being stored on the local computer, this folder is often stored on a central file server, making it easier to backup and secure.</p>
+                          <p><b>Folder Redirection</b> - allows admins to change the location of certain folders, such as desktop or document from the local machine to a network server, ensuring that important files are stored centrally and can be backed-up regularly.</p>
+                          <p><b>Security Groups</b> - simplify the management of user permissions within the domain by placing users into groups admins can easily assign permissions to resources like files, folders, or printers.</p>
+                        </ul>
+                        <i>Especially useful in large environments where managing permissions for many users individually would be time consuming.</i>
+
+                        <br>
+                        <br>
+                        
+                        <h3 id="simple-list-item-2">Wireless Security Protocols and Authentication</h3>
+                        <p></p>
+
+                        <br>
+                        <h5><b>Wireless Encryption</b></h5>
+                        <table style="border: 1px solid black;">
+                          <thead style="border: 1px solid black; background-color: rgba(212, 162, 0, 0.589); color: white;">
+                            <tr style="border: 1px solid black; text-align: center;">
+                              <th>standard</th>
+                              <th>Acronym</th>
+                              <th>Encryption</th>
+                            </tr>
+                          </thead>
+                          <tbody style="background-color: rgb(75, 75, 75); color: white;">
+                            <tr>
+                              <td>Wireless Equivalent Privacy</td>
+                              <td>WEP</td>
+                              <td>RC4</td>
+                            </tr>
+                            <tr>
+                              <td>Wi-Fi Protected Access</td>
+                              <td>WPA</td>
+                              <td>TKIP</td>
+                            </tr>
+                            <tr>
+                              <td>Wi-Fi Protected Access 2</td>
+                              <td>WPA2</td>
+                              <td>AES</td>
+                            </tr>
+                            <tr>
+                              <td>Wi-Fi Protected Access 3</td>
+                              <td>WPA3</td>
+                              <td>SAE</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <br>
+                        <h5><b>Wireless Authentication</b></h5>
+                        <p>Networks use whats known as an authentication factor, which is fancy talk for the method that proves your legit. These factors can be something you know - a password, something you have, something your are, or even something you aren't.</p>
+                        <p>Let's break it down and check
+                          out some of the most common ways in which wireless networks decide whether to let you
+                          in for starters, there are two main types of Wireless authentication, Personal and
+                          Enterprise.
+                          <ul>
+                            <li><b>Personal Authentication</b> - what most of us are familiar with it's the classic Wi-Fi password also known as a passphrase, pre-shared key or psk, you've probably done this a 100 times.
+                              The network requires you to enter a password before connecting, once you're in the network assumes everyone with
+                              that password is trusted, it's simple and effective for home networks or small setups but it's not ideal for larger
+                              organizations.</li>
+                            <li><b>Enterprise Authentication</b> - where tighter security is needed for those scenarios, it uses a more complex setup
+                              instead of just a password it relies on specialized protocols to manage individual user access. This is where
+                              authentication methods like RADIUS, TACACS+ and Kerberos really shine these
+                              methods don't just ask for a simple password, they require a username and password combo and sometimes more. These
+                              credentials are then verified by an authentication server, actually let me take a second to break down these
+                              Enterprise authentication methods a bit more:</li>
+                              <ul>
+                                <li><b>RADIUS</b> - Remote Authentication
+                                  Dial In User Service is a protocol that handles authentication, authorization, and
+                                  accounting for users who connect to a network. It acts like a middleman that talks between the network and a central
+                                  database of authorized users. When someone tries to log in, RADIUS checks if their username and password are on the
+                                  list then grants or denies access based on the result. It's commonly used in larger organizations to centrally manage
+                                  network access.</li>
+                                <li><b>TACACS+</b> - Terminal Access Controller Access
+                                  Control System Plus is a proprietary protocol
+                                  developed by Cisco that is used for authenticating and controlling access to network devices, such as routers and
+                                  switches. It provides more granular control than RADIUS by separating authentication, authorization, and
+                                  accounting. TACACS plus not only verifies who you are but also determines what
+                                  actions you're allowed to perform, this makes it useful for managing access to network infrastructure and keeping
+                                  detailed logs of what each device is doing. TACACS plus is often used in Cisco environments for managing administrative
+                                  access to network devices but thirdparty implementations of this authentication method do
+                                  exist.</li>
+                                <li><b>Kerberos</b> - is a network Authentication Protocol that uses tickets to verify user identities. When
+                                  you log in Kerberos gives you a ticket that proves your identity, you can then use this ticket to access multiple services
+                                  on the network without having to re-enter your credentials, it's like getting a pass that allows you to move freely
+                                  within the network making Kerberos a good choice for environments with multiple
+                                  systems.</li>
+                                <li><b>MFA</b> - Multiactor-Authentication, where
+                                  things get extra secure. MFA adds another layer of verification on top of the basic username and password whether
+                                  you're using a personal Wi-Fi password or Enterprise methods like RADIUS, TACACS Plus or Kerberos you can still apply MFA,
+                                  this ensures that even if someone gets hold of a password they still need that second piece of verification to access
+                                  the network.</li>
+                              </ul> 
+                          </ul>
+                          
+                        <br>
+                        <h3 id="simple-list-item-3">Malware Detection, Removal & Prevention Methods & Tools</h3>
+                        <p>When it comes to malware think of it like that one friend who crashes your party Uninvited devours all your
+                        snacks and leaves behind a total mess but instead of crumbs malware leaves a trail of chaos through your system.</p>
+                        
+                        <br>
+                        <h5>Types of Malware</h5>
+                        <br>
+                        <i>Malware is malicious software designed to damage, disrupt, or gain unauthorized access to a computer
+                          system.</i>
+                          <br>
+                          <br>
+                        <ul>
+                          <li><b>Viruses</b> - the
+                            classic form of malware that replicates by attaching itself to clean files or programs when those files or programs
+                            are executed the virus activates and spreads further Its Behavior is all about multiplying and infecting as many
+                            files as possible like a digital contagion viruses can corrupt data slow.
+                            down your system and even destroy files.</li>
+                          <li><b>Trojan</b> -
+                            malware disguised as legitimate software tricking users into installing it unlike a virus it doesn't replicate itself but
+                            rather uses deception to sneak into your system once it's inside it can open back
+                            doors for other malware, steal data or even take control of the infected device
+                            it's like downloading what you think is an awesome game only to find out it's secretly letting hackers rummage through
+                            your files.</li>
+                          <li><b>Root Kits</b> - malware that hides its presence on your system often embedding itself within your operating systems root files
+                            rootkits operate at the core or root of the operating system manipulating system
+                            processes to allow unauthorized access while remaining hidden from most antivirus tools. These are the digital
+                            ninjas of the malware world they're stealthy and dangerous. </li>
+                          <li><b>Ransomware</b> - like a digital
+                            hostage taker it infiltrates your system encrypts your files and demands a ransom
+                            typically in cryptocurrency in exchange for unlocking them the behavior of ransomware is simple yet catastrophic. It
+                            denies you access to your own data holding it for ransom and even if you pay there's no guarantee that the
+                            attacker will actually return your files. It's the ultimate cyber extortion leaving victims with limited options
+                            unless they have secure backups in place.</li>
+                          <li><b>Spyware</b> - a particularly stealthy form of malware that operates in the background gathering information without the the user's knowledge its primary
+                            goal is to collect data anything from browsing habits to sensitive personal information like usernames, passwords, or
+                            credit card numbers. The danger of spyware lies in its ability to stay hidden for long periods all while quietly
+                            stealing data. One specific type of spyware is a key logger.
+                            A key logger is malware that records every keystroke the user makes tracking passwords, login information, and
+                            even messages. key loggers give attackers a front row seat to your every move turning even mundane tasks like typing
+                            an email into a security risk additionally one common delivery method for key loggers is through a small
+                            physical device that can be plugged into a USB port usually between the keyboard and the computer it sits quietly between
+                            the two, intercepting and recording everything typed on the keyboard the worst part since it's a physical device
+                            traditional antivirus software won't detect it because it doesn't interact with the operating system so keep your
+                            eyes peeled.</li>
+                          <li><b>Boot Sector Virus</b> - infects the boot sector of a hard drive making it
+                            extremely persistent and difficult to remove even if you wipe the OS the virus can remain reinfecting the system as
+                            soon as it boots up the behavior is particularly nasty because it affects the core of the system where the OS
+                            loads from.</li> 
+                          <li><b>Crypto Miners</b> - secretly use your your systems resources specifically your CPU or GPU to mine cryptocurrency. These
+                            parasites slow down your system, overheat your hardware, and can drastically reduce your device's performance. You may not
+                            notice at first but if your computer feels like it's running through molasses you might have a crypto Miner leeching
+                            off your resources.</li>
+                            <hr>
+                          <li><b>Worms</b> - Spread across computers</li>
+                          <li><b>Adware</b> - Spams you with ads</li>
+                          <!-- <li><b>Botnets</b> - turn your pc into a zombie</li> -->
+                        </ul>
+
+                        <br>
+                        <h5>Malware Removal Tools</h5>
+                        <ul><p><b>Windows Recovery Mode</b> - when malware takes over your system and you can't boot it Up normally, recovery mode can be your best
+                          friend. This specialized boot environment allows you to troubleshoot without interference from malicious software it
+                          gives you access to a variety of system recovery tools such as system restore, startup repair, command prompt, and even
+                          the ability to reinstall the operating system. Recovery mode is often used when there is a critical issue
+                          preventing the system from starting normally such as severe malware infections or corrupted system files.
+                          This environment operates outside the main operating system which means it doesn't load most of your systems
+                          drivers or software including any malware that may be installed, for example, if ransomware locks down your
+                          entire computer booting into recovery mode may allow you to regain access and start the cleanup process.</p>
+                          <p><b>Antivirus Software/ Anti-malware</b> - Software designed to detect, prevent, and remove malicious software (Often the first line of defense against malware. It works by scanning files for known viruses and blocking them before they cause harm.)</p>
+                          <p><b>Software Firewall</b> - software that monitors and controls incoming and outgoing network traffic.</p>
+                          <p><b>User Education</b> - Regarding common threats.</p>
+                          <p><b>Anti-Phising Training</b> - help users identify deceptive emails that could lead to malware infections.
+                          <i>Identify sus emails, check the senders address and avoid clicking on unknown links.</i></p>
+                          </ul>
+
+                        <br>
+                        <h6>Important steps to prevent malware from damaging your computer system</h6>
+                        <ol>
+                          <li>Keeping operating systems and application pathes up-to-date</li>
+                          <li>User education regarding common threats</li>
+                          <li>Keeping Anti-Malware signatures up-to-date</li>
+                        </ol>
+                        
+                        <br>
+                        <h3 id="simple-list-item-4">Social-Engineering Attacks & Threats</h3>
+                        <p><b>Social Engineering</b> - the act of manipulating individuals into divulging confidential information or performing actions that compromise security.</p>
+
+                        <ul>
+                          <li><b>Phishing</b> - a type of social engineering attack where an attacker sends fraudulent communications, typically via email, that appear to come from a legitimate source.</li>
+                          <li><b>Smishing</b> - a type of phishing attack where attackers send fraudulent communications via SMS text.</li>
+                          <li><b>Vishing</b> - a type pf phishing attack where attackers communicate via phone calls or voice messages.</li>
+                          <li><b>Whaling</b> - a type of phishing attack where attacks go after the big fish, targets are usually executives or high profile individuals.</li>
+                          <li><b>Impersonation</b> - a social engineering technique where an attacker pretends to be a trusted entity to gain unauthorised access to sensitive information or systems.</li>
+                          <li><b>Tailgating</b> - a physical security breach in which an unauthorised person follows an authorized individual into a restricted area without their knowledge.</li>
+                          <li><b>Shoulder surfing</b> - a social engineering technique where an attacker physically observes an individual entering sensitive information by watching over their shoulder.</li>
+                          <li><b>Dumpster diving</b> - a social engineering technique where attackers search through trash or discarded material to find sesitive information.</li>
+                          <li><b>Evil twin</b> - a wireless network attack where an attacker sets up a rogue Wi-Fi access point that mimics a legitimate network.</li>
+                        </ul>
+
+                        <h5>Threats</h5>
+                        <p><i>Anything that has the potential to cause harm to a system, network, or data.</i></p>
+                        <br>
+                        <ul>
+                          <li><b>Denial of service (DoS)</b> - a type of attack in whch the attacker seeks to make a machine or network resource unavailable to its intended users.</li>
+                          <li><b>Distributed Denial of service (DDoS)</b> - a type of attack in which multiple attackers or multiple devices controlled by the attacker perform an attack.
+                          <ul>
+                            <li><b>Botnets:</b> a vast network of compromised computers that have been infected with malware.</li>
+                            <li><b>Zombie:</b> an infected machine that is controlled by a remote attacker.</li>
+                          </ul></li>
+                          <li><b>Zero-Day attack</b> - an attack that takes advantage of a software vulnerability that hasnt been discovered yet by the software developers.</li>
+                          <li><b>Spoofing</b> - an attack where an individual or system masquerades as another by falsifying data.
+                          <ul>
+                            <li>Caller ID</li>
+                            <li>Website Spoofing</li>
+                            <li>Email Spoofing</li>
+                            <li>ARP Spoofing</li>
+                            <li>IP Spoofing</li>
+                            <li>Text message Spoofing</li>
+                            <li>DNS Spoofing</li>
+                            <li>GPS Spoofing</li>
+                          </ul></li>
+                          <li><b>On-Path attack</b> - an attack where an attacker positions themselves between two parties to secretly intercept, monitor, or alter communications.</li>
+                          <li><b>Brute-force attack</b> - systematically guessing every possible comnination of letters, numbers, and symbols to uncover a password.</li>
+                          <li><b>Dictionary attack</b></li>
+                          <li><b>Insider Threat</b> - a security risk that originates with the organization</li>
+                          <li><b>Structured Query Language (SQL) injection</b> - inserting malicious code into a SQL query in order to manipulate a database.</li>
+                          <li><b>Cross-Site Scripting (XXS)</b> - injecting malicious scripts into web pages viewed by other users.</li>
+                        </ul>
+
+                        <br>
+                        <h5>Vulnerabilities</h5>
+                        <br>
+                        <i>A weakness or flaw in a system, network, or application that can be exploited to gain unauthorised access or cause harm.</i>
+                        <br>
+                        <br>
+                        <ul>
+                          <li><b>Non-compliant Systems</b> a non-compliant system is one
+                            that doesn't meet the necessary security policies or industry standards think of it like a factory that's missing Key
+                            Safety protocols eventually something is going to go wrong in it non-compliance
+                            could mean improper configurations or possibly the use of unauthorized applications these systems are sitting
+                            ducks for attackers thus ensuring compliance with organizational policies
+                            and regulatory requirements is crucial to reducing risk and keeping systems
+                            safe.</li>
+                            <li><b>Unpatched Systems</b> whether you're working with an operating system, business software or
+                            even your favorite computer game security patches are released regularly to address vulnerabilities that have
+                            been identified these patches help fix bugs, improve performance and most importantly close security gaps that
+                            hackers can exploit. When these updates are not applied systems are left exposed to non exploits making them easy targets
+                            for attackers.</li>
+                            <li><b>Unprotected Systems</b> these are devices
+                            running without essential security measures like antivirus software or a firewall think of anti virus as your
+                            system's immune system constantly scanning for malicious software when detected the antivirus works to
+                            neutralize and remove the threat before it can cause any damage on the other hand a firewall acts as the gatekeeper
+                            for your network, it monitors incoming and outgoing traffic deciding what's allowed to pass through based on
+                            predefined security rules. Without a firewall your system is wide open to unauthorized access without both
+                            antivirus protection and a firewall in place your system is vulnerable to everything from malware infections to
+                            hacking attempts</li>
+                            <li><b>EOL</b> when an OS reaches the end of its life the manufacturer stops providing updates
+                            including those critical security patches. End of life systems are prime targets for attackers because they know
+                            no new defenses are being rolled out if your system is running an endof life OS it's time to plan for an upgrade to
+                            ensure ongoing protection</li> 
+                            <li><b>allowing employees to use their own devices at work</b> while this can boost productivity and flexibility it also introduces
+                            significant security risks these personal devices might not have the same level of security as company managed
+                            devices. Without strict security policies and proper configuration these employee
+                            owned devices can open doors to malware, data leaks and unauthorized access to the
+                            network.</li>
+                        </ul>
+                        <br>
+                        <h3 id="simple-list-item-5">Security Settings in Windows OS</h3>
+                        
+                        <br>
+                        <h5>Defender Antivirus</h5>
+                        <p>A built-in security feature in windows that provides real-time protection against viruses, malware, and other threats.</p>
+                        <p>To manage Windows Defender antivirus start by opening Windows settings and select update and
+                          security from there choose Windows security and then click on virus and
+                          threat protection once you have navigated this far you will see an option labeled manage
+                          settings once you select manage settings you will be presented with the option to activate and deactivate real-time
+                          protection with an on-off toggle button just remember turning off realtime protection leaves your system exposed.</p>
+                        <p>Keeping your virus definitions current
+                          is essential because that is how Windows Defender antivirus knows what new threats to watch out for thankfully this
+                          feature updates automatically through Windows update but you can also check for updates manually if needed to do
+                          this we will head back to the virus and threat protection section here you will see an option to check for updates by
+                          clicking through and performing a manual update you will ensure that you are always using the latest virus
+                          definitions which keeps your system protected against even the newest forms of malware.</p>
+
+                        <br>
+                        <h5>Defender Firewall Management</h5>
+                        <p>Acts as your system's first
+                          line of defense when managing Network traffic the firewall controls what comes in and goes out ensuring your system is
+                          safe from unauthorized access just like antivirus software the f wall plays a
+                          key role in security but instead of identifying malware it focuses on monitoring your network connections now
+                          we've discussed firewalls and more specifically Windows Defender Firewall earlier in this course but this time I
+                          will focus on how to activate and deactivate this security feature I'll also dive into Port security providing a
+                          real world example and wrap things up by explaining how you can control application specific access to your
+                          Windows device let's start with a walkthrough on how to activate or deactivate your
+                          Windows Defender Firewall by default this feature is turned on but there may be times when you need to temporarily
+                          disable it such as when troubleshooting or testing Network configurations to do this head to settings then click on
+                          update and security from here select Windows security then click firewall and network
+                          protection if you followed the steps correctly you will now see options to activate or deactivate the firewall for
+                          different network profiles just click on domain private or public and you will be able to toggle the firewall for each
+                          network profile on or off just remember turning off the firewall leaves your system exposed.</p>
+                          <ul>
+                            <li>
+                              <h6>Port Security</h6>
+                              <p>Ports are essentially the communication channels your system uses to send and receive data and securing these ports is
+                                critical to keeping your network safe.</p>
+                              <p>Port security is one way for a
+                                firewall to control Network traffic by allowing traffic only on necessary ports
+                                you limit the opportunities attackers have to gain unauthorized access to your system and just in case you are not sure
+                                which ports you should have committed to memory at this point.</p>
+                              <p>Hostname: my-webserver</p>
+                              <p>IP Address: 10.10.10.1</p>
+                              <p>Gateway: 10.10.0.1</p>
+                              <p>Subnet Mask: 255.255.255.0</p>
+                              <p>Open Ports: 80, 53,443</p>
+                                <p>Let's imagine you have a web server with the IP address
+                                10.10.0.4 the server is currently set up with some open ports like 53 for DNS 80
+                                for HTTP and 443 for https however a technician needs to
+                                remotely access this server for troubleshooting and they want to establish an RDP session well RDP will
+                                use port 3389 for this remote connection and since the port isn't currently open
+                                on This Server the technician won't be able to connect therefore to allow the technician to establish an RDP session
+                                with the web server you will need to open port 3389 on the firewall this will
+                                allow the communication Channel between the technician's device and the server to work properly letting them securely
+                                connect to the server from a remote location after the work is done it's a good idea to close this port again to
+                                reduce any potential security risks from leaving it open unnecessarily.</p>
+                            </li>
+                            <h5>Common Network Protocols</h5>
+                            <table>
+                              <thead style="color: white;background-color: rgb(180, 117, 0);border: 1px solid rgb(0, 0, 0);">
+                                <tr>
+                                  <th>Acronym</th>
+                                  <th>Network Protocol</th>
+                                  <th>Port</th>
+                                </tr>
+                              </thead>
+                              <tbody style="color: white;background-color: rgb(63, 63, 63);border: 1px solid black;">
+                                <tr>
+                                  <td>FTP</td>
+                                  <td>File Transfer Protocol</td>
+                                  <td>20/21</td>
+                                </tr>
+                                <tr>
+                                  <td>SSH</td>
+                                  <td>Secure Shell</td>
+                                  <td>22</td>
+                                </tr>
+                                <tr>
+                                  <td>_</td>
+                                  <td>Telnet</td>
+                                  <td>23</td>
+                                </tr>
+                                <tr>
+                                  <td>SMTP</td>
+                                  <td>Simple Mail Transfer Protocol</td>
+                                  <td>25</td>
+                                </tr>
+                                <tr>
+                                  <td>DNS</td>
+                                  <td>Domain Name System</td>
+                                  <td>53</td>
+                                </tr>
+                                <tr>
+                                  <td>HTTP</td>
+                                  <td>Hyper Text Transfer Protocol</td>
+                                  <td>80</td>
+                                </tr>
+                                <tr>
+                                  <td>DHCP</td>
+                                  <td>Dynamic Host Configuration Protocol</td>
+                                  <td>67/68</td>
+                                </tr>
+                                <tr>
+                                  <td>POP3</td>
+                                  <td>Post Office Protocol</td>
+                                  <td>110</td>
+                                </tr>
+                                <tr>
+                                  <td>NetBIOS</td>
+                                  <td>Network Basic Input/Output System</td>
+                                  <td>137/139</td>
+                                </tr>
+                                <tr>
+                                  <td>IMAP</td>
+                                  <td>Internet Mail Access Protocol</td>
+                                  <td>143</td>
+                                </tr>
+                                <tr>
+                                  <td>SNMP</td>
+                                  <td>Simple Network Management Protocol</td>
+                                  <td>161/162</td>
+                                </tr>
+                                <tr>
+                                  <td>LDAP</td>
+                                  <td>Lightweight Directory Access Protocol</td>
+                                  <td>389</td>
+                                </tr>
+                                <tr>
+                                  <td>HTTPS</td>
+                                  <td>Hyper Text Transfer Protocol Secure</td>
+                                  <td>443</td>
+                                </tr>
+                                <tr>
+                                  <td>SMB</td>
+                                  <td>Server Message Block</td>
+                                  <td>445</td>
+                                </tr>
+                                <tr>
+                                  <td>RDP</td>
+                                  <td>Remote Desktop Protocol</td>
+                                  <td>3389</td>
+                                </tr>
+                              </tbody>
+                            </table>
+  
+                            <li>
+                              <h6>Application Security</h6>
+                              <p>Some applications need network access to
+                                function properly but allowing unrestricted access can be risky Windows Defender Firewall lets you control which
+                                apps can communicate over the network to manage this go to firewall and network protection and click allow an app
+                                through the firewall you'll see a list of apps and features and from here you can choose to allow or block them you
+                                can also decide whether an app is owed on private or public networks this way you reduce the risk of unauthorized apps
+                                or malware connecting to external servers.</p>
+                            </li>
+                          </ul>
+
+                          <h5>Users & Groups</h5>
+                          <p>In Windows whether it's a home PC or a corporate environment managing user accounts is
+                            essential for maintaining security and functionality, as such I think it would be prudent to go over the different
+                            types of accounts, the concept of least privilege, and the key differences between user access
+                            groups. When setting up a Windows user you have two main account options a Microsoft account or a local
+                            account:</p>
+                            <ul>
+                              <li><b>Microsoft account</b> connects your login credentials to your online Microsoft
+                                profile giving you access to a wide range of cloud-based services and features.
+                                This account type links your system with Microsoft's ecosystem enabling you to use services like one drive for cloud
+                                storage, the Microsoft store for app and software downloads and let's not forget
+                                the ability to synchronize across multiple devices, for instance your Windows settings, files and even browser
+                                bookmarks can sync across your laptop, desktop or even your phone. This can be
+                                particularly useful if you frequently switch between devices or if you want the convenience of accessing your files
+                                from anywhere.</li>
+                              <li><b>local account</b> is tied only to the device itself it doesn't offer the cloud
+                                syncing options that a Microsoft account provides, instead everything stays local to that specific device. A local account
+                                is ideal for someone who prefers a more traditional offline experience, doesn't need cloud services or wants to keep
+                                their data completely local and independent from Microsoft's Cloud infrastructure ,this is often the choice
+                                for users who prioritize privacy or who use their computer in a more isolated offline
+                                environment.</li>
+                                <br>
+                              <h6>User Permissions</h6>
+                                <i><b>least privilege</b> the idea is users should have
+                                just enough access to do their jobs and no more, this minimizes the risk of accidental changes or unauthorized
+                                actions that could harm the system. When users have only the permissions they need it limits the chances of malware
+                                spreading or sensitive information being accessed due to user error or a compromised account. By applying least
+                                privilege, you reduce the attack surface of your system and keep it more secure overall.</i>
+                              <li><b>User Access Groups</b> and how they fit into this principle starting
+                                from the least access and moving up to administrative access.
+                                <ul>
+                                  <li>
+                                    <b>Guest User Account</b> this user group is the most Limited in terms of access and is a great example
+                                    of least privilege in action this account is designed for temporary use allowing basic tasks such as browsing
+                                    the web or accessing shared files without the ability to install software or make any system changes this type of
+                                    access is ideal for situations where you need to provide shortterm access without risking any significant modifications to
+                                    the system.
+                                  </li>
+                                  <li>
+                                    <b>Standard Account</b> this
+                                    is the default account type for most users it allows them to perform common tasks like browsing the internet running
+                                    applications and managing personal files however standard users cannot install
+                                    software or change key system settings which helps prevent accidental damage or unauthorized modifications this account
+                                    is designed to balance usability with security giving users enough access for everyday tasks while limiting the
+                                    potential for harm.
+                                  </li>
+                                  <li>
+                                    <b>Power User</b> role
+                                    this access group provides more flexibility than a standard account but still doesn't offer full administrative
+                                    control Power users can install programs and adjust certain system settings but are restricted from making critical
+                                    changes that could impact the entire system though this role is less common in modern systems power users have more
+                                    Authority than standard users making this role a middle ground for those who need some additional access without full
+                                    admin rights.
+                                  </li>
+                                  <li>
+                                    <b>Administrator Account</b>
+                                    offers the highest level of control over the system administrators can install and uninstall software modify systemwide
+                                    settings and manage other user accounts just keep in mind with great power comes
+                                    great responsibility because of this it is crucial to limit administrator access to only those who truly need it as this
+                                    level of privilege makes the system more vulnerable to potential security risks but by following the principle of least
+                                    privilege administrator access should be reserved for specific tasks to minimize exposure to attacks or unwanted
+                                    changes.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <h6>User Permissions feature</h6> 
+                                <p>known as <b>User Account
+                                Control (UAC)</b> - this is a built-in Windows security feature that helps prevent unauthorized changes to
+                                your system. Anytime a program attempts to make system level changes like installing software or altering settings
+                                UAC prompts you to confirm the action. Even administrator accounts will see these prompts which acts as a safeguard
+                                to ensure that changes are deliberate. This feature is crucial in keeping your system secure from unwanted alterations,
+                                whether caused by malware or user error. </p></li>
+                                
+                                <li><h6>User Access Groups feature</h6>
+                                <p>The run as administrator option, if you are logged in as a standard user and need to run a
+                                program with administrative privileges, you can use the run as administrator option. By right-clicking on a program
+                                and selecting this option you grant the necessary administrative permissions for that specific task without having to log
+                                into an administrator account, this is particularly helpful when performing one-off administrative tasks without
+                                giving full control to a user. Run as administrator allows you to execute only the tasks that require admin privileges
+                                keeping the overall system secure while getting the job done.</p></li>
+                                
+                                <i>In some summary by understanding
+                                User Access Groups applying, the principle of Least Privilege and using features like user account control and
+                                run as administrator you can effectively manage permissions while keeping your system secure. These tools ensure users
+                                can perform necessary tasks without compromising the integrity of the
+                                system.</li></i>
+                            </ul>
+
+                            <br>
+                            <h5>Windows Login Options</h5>
+                            <p>I'll walk you through the different login methods available and where to find them in the settings
+                              menu</p>
+                            <p>To access your login options go to the settings menu in Windows 10 and
+                              select accounts then select signin options
+                              from here you'll be able to set up or modify any of the following methods to secure your device.</p>
+                            <ul>
+                              <li><b>Facial Recognition</b> which Windows has dubbed — Windows hello
+                                face — facial recognition is a convenient hands-free login option available through Windows hello using an infrared
+                                camera. This method scans your face to securely unlock your device. It's quick and highly secure offering seamless
+                                access without the need to type anything. You can set this up in the the sign in options by selecting Windows hello face
+                                and following the prompts to register your face.</li>
+                                <li><b>Fingerprint Authentication</b>
+                                another Windows hello feature this method lets you unlock your device by placing a finger on a
+                                fingerprint reader. To set it up go to signin options select Windows hello fingerprint and follow the prompts by
+                                placing your finger on the reader repeatedly until the setup is complete. This is a fast and secure way to log in
+                                ensuring that only you can access your system.</li>
+                                <li><b>Personal Identification Number Pin</b> is a simpler alternative to a password and it's Unique to your device unlike a password, a pin stays local to
+                                your machine and cannot be used on other devices or online services making it a bit more secure in certain contexts. To
+                                set it up go to signin options select Windows hello pin and create your
+                                PIN.</li> 
+                                <li><b>Security Key</b> is a physical device that provides an additional layer of
+                                protection. When logging in just insert the key into your device, it's an excellent option for those seeking
+                                enhanced security as it requires both the physical key and your presence. You can set this up under signin options by
+                                selecting Security Key and following the steps to pair the key with your
+                                device.</li>
+                                <li><b>Password</b> Remains the most traditional login option, it's widely used but it's also one of the most
+                                vulnerable methods due to the risk of weak or reused passwords. To maximize security always use strong unique
+                                passwords for each device you can also update or change your password by selecting the password option and signin
+                                options. 
+                                <li><b>Picture Password</b> this
+                                method allows you to choose an image and draw a series of gestures on it such as circles or lines which you then use to
+                                unlock your device, it's less common but provides a fun personalized way to log in. You can set this up in sign-in
+                                options by selecting picture password and following the steps to configure your
+                                gestures </li>
+                                <br>
+                                <i>
+                                  Windows 10 offers a wide variety of login options from biometric
+                                  methods like facial recognition and fingerprint to more traditional choices like a pin password and even a picture
+                                  password you can also add an extra layer of security with a security key each option provides different levels of
+                                  protection so choose the method that best suits your needs and preferences for both convenience and security.</li>
+                                </i>
+                            </ul>
+
+                            <br>
+                            <h5>Signle Sign-on</h5>
+                            <p>How often do you find yourself
+                              juggling multiple accounts each with its own unique username and password, this can become cumbersome and challenging to
+                              manage. That is where single sign on comes in. Single Sign On commonly referred to as SSO is a user
+                              authentication service that permits a user user to use one set of login credentials like a username and password
+                              to access multiple applications. Think of it as a master key that unlocks several doors eliminating the need to have
+                              multiple keys for each door, so how does single sign on work.
+                              
+                              <h6>How does single sign on work?</h6>
+                              When you first log into an application that uses SSO the system checks if you've been
+                              authenticated by the central SSO solution, if you haven't it prompts you to log in. Once you provide your
+                              credentials the SSO system validates them against a central database, upon successful validation, the SSO system
+                              issues a token, a kind of digital stamp of approval. This token is then used for subsequent authentication requests
+                              during that session. As you navigate to another integrated application instead of asking for your credentials again the
+                              system requests the SSO solution to verify the token's validity, if the token is recognized and still valid the second
+                              application grants you access without requiring another login. <br><br>
+                              <p>This process of token verification repeats for all
+                              integrated applications ensuring a smooth and uninterrupted user experience.</p>
+                              <br>
+                              <i>If you work in a corporate environment using SSO is also
+                              likely to reduce the number of help desk tickets due to users forgetting their
+                              passwords.</i></p>
+
+                              <br>
+                              <h5>NTFS vs Share Permissions</h5>
+                              <p>When managing files and folders in a Windows environment you will need to understand the difference
+                                between NTFS permissions and share permissions. Both play a role in determining who can access and modify
+                                your data but they apply in different contexts. Let's dive into what each type of permission does and how they work
+                                together to control access.</p>
+                                <br>
+                                <br>
+                                <p>
+                                  NTFS permission control access to files and folders on locally stored drives, formatted with the NTFS or new technology file system. These permissions
+                                  dictate what users can do with the files and folders whether they're on a local machine or shared over the network. NTFS
+                                  permissions apply no matter how a file or folder is accessed making them particularly important for data security.
+                                </p>
+                                <h6>The basic NTFS permissions include:</h6>
+                                <ul>
+                                  <li>
+                                    <b>Read</b> - allowing users to view the contents of a file or folder but not modify it.
+                                  </li>
+                                  <li>
+                                    <b>Write</b> - giving users the ability to modify and save changes.
+                                  </li>
+                                  <li>
+                                    <b>Read and Execute</b> - which enables users to view and execute files.
+                                  </li>
+                                  <li>
+                                    <b>List folder contents</b> - allowing users to see the names of files and subfolders within a folder.
+                                  </li>
+                                  <li>
+                                    <b>Modify</b> - which combines read write execute and delete capabilities.
+                                  </li>
+                                  <li>
+                                    <b>Full control</b> - granting users complete authority over files including the ability to modify
+                                    permissions.
+                                  </li>
+                                  
+                                </li>
+                                <br><br>
+                                  <li>
+                                    In contrast to NTFS permissions, share permissions control access to files and folders shared over
+                                    a network. These permissions are applied to Shared folders and determine what network users can do when accessing
+                                    these folders remotely.
+                                  </li>
+                                  <h6>The basic Share Permissions are:</h6>
+                                  <li>
+                                    <b>Read</b> - allowing users to view and open files but not modify or
+                                    delete them.
+                                  </li>
+                                  <li>
+                                    <b>Change</b> - which grants users the ability to read modify and delete
+                                    files.
+                                  </li>
+                                    <b>Full Control</b> - which gives users the highest level of access including
+                                    managing share permissions. 
+                                  </li>
+                                  <i>
+                                    It's important to remember that share
+                                    permissions apply only when accessing resources over the network. If files or folders are accessed locally, only NTFS
+                                    permissions come into play when both NTFS and share permissions are in place, the most restrictive permission between
+                                    them will apply, for example if a user is accessing a file remotely and has full control through share permissions but
+                                    only read access when it comes to NTFS permissions, they will only be able to read the file.
+                                  </i>
+                                </ul>
+                              
+                                <p>
+                                  In addition to permissions, files and folders in Windows have attributes that control how they behave. 
+                                </p>
+                                <h6>Common File Attributes include:</h6>
+                                <li>
+                                  <b>Read-only</b> - which allows files to be viewed but not modified.
+                                </li>
+                                <li>
+                                  <b>Hidden</b> - which hides files from normal view unless the option to display hidden items is enabled.
+                                </li>
+                                <br>
+                                <i>
+                                  These attributes add an extra layer of control Beyond basic
+                                  permissions.
+                                </i>
+                                <li>
+                                  <b>Inheritance</b> - simplifies permission management. When you set permissions on a
+                                  folder and have inheritance enabled those permissions are automatically inherited by all subfolders and files
+                                  within that folder. This is helpful for managing large folder structures because it eliminates the need to manually apply
+                                  permissions to each file or subfolder, for instance if you have a folder with read permissions any new subfolder
+                                  created within it will inherit the same read permission. 
+                                </li>
+                                <br>
+                                <p>
+                                  Understanding the differences
+                                  between NTFS permissions and share permissions is crucial for managing file Security in a Windows environment.
+                                  NTFS permissions apply both locally and over the network, while share permissions control access for remote users. 
+                                  When both are used the most restrictive permissions will take precedence. Combine this with file attributes and
+                                  inheritance and you have a powerful set of tools to fine-tune access and ensure the security of your
+                                  data.</p>
+
+                        <br>
+                        <h3 id="simple-list-item-6">Workstation Configuration for Security</h3>
+
+                        <br>
+                        <h5>Data at rest</h5>
+                        <p>Imagine a calm Serene lake
+                          with the sun setting in the background, the stillness of the water is reminiscent of data at rest in the world
+                          of Information Technology. Simply put data at rest refers to data stored on devices like computers or servers not
+                          actively being used or transmitted. More specifically it is the files and documents that sit quietly on your
+                          storage drive however this Stillness doesn't guarantee safety that's where data at rest encryption comes
+                          in.</p>
+                          <ul>
+                            <li><b>File Level Encryption</b> - additionally referred to as
+                              file-based encryption or file folder encryption. This method is distinct in its approach to data protection, instead
+                              of encrypting an entire storage medium or device. File level encryption zeros in on individual files or directories
+                              encrypting them directly through the file system. One commonly used tool for this
+                              type of encryption is <span>Encrypting File System</span>, which is built into Windows. Encrypting file system or EFS for short
+                              allows you to encrypt specific files or folders on an NTFS formatted drive providing a layer of security without
+                              needing to encrypt the entire drive. To encrypt a single folder you simply rightclick the folder select properties
+                              and then select the advanced tab. This will open another window from here you
+                              just check the option for encrypt contents to secure your data and voila you have just enabled EFS. Once encrypted,
+                              only users with the correct decryption key or access rights can view or modify the files ensuring that sensitive data
+                              remains protected even on a shared system.</li>
+                            <li><b>Full Disk Encryption</b> - a more comprehensive
+                              solution. Think of disk level encryption as a protective shield that covers the entire storage device whether it's your
+                              computer's hard drive or an external disk, if your goal is to protect everything on your device from system files to
+                              personal data, disk level encryption is the ideal choice. To understand why disk
+                              level encryption is so important consider the example of a stolen laptop, because of their portability laptops are
+                              prime targets for theft but often the true value for the thief isn't the device itself it's the data stored
+                              inside, this could include anything from personal photos to sensitive business documents or financial information.
+                              Without encryption a skilled Thief could easily access this data by removing the hard drive and connecting it to another
+                              device leading to privacy breaches or financial loss. One of the most commonly used tools
+                              for this level of protection in Windows is:</li>
+                              <ul>
+                                <li><b>Bit Locker</b> - encrypts the entire drive ensuring that everything
+                                  from the operating system to personal files remains secure. It works by scrambling the data on the disk making
+                                  it unreadable to anyone without the correct decryption key this level of encryption provides Peace of Mind
+                                  particularly for users who store sensitive information on their devices a key point to remember is that if the
+                                  system undergo significant changes such as a major repair OS reinstallation or
+                                  even certain BIOS updates you may be required to use a recovery key to regain access to the encrypted data this
+                                  recovery key is essential because without it even the rightful owner can be locked out of their own data
+                                  therefore it's crucial to store this recovery key in a safe accessible location to avoid being permanently
+                                  locked out of your encrypted system.</li>
+                                <li><b>Bit Locker to Go</b> - For portable storage. which extends bit Locker's powerful encryption capabilities to removable devices like
+                                  USB drives this ensures that sensitive information transferred using USB drives
+                                  remains secure even if the drive is lost or stolen users can easily protect their data by encrypting the entire USB drive
+                                  with Bit Locker to Go requiring a password or recovery key to unlock it on any
+                                  device.
+                                </li>
+                              </ul> 
+                            <br>
+                            <i>
+                              Data at rest encryption plays a significant role in securing information                            
+                              that's not actively in use. File Level Encryption through tools like EFS, protects specific files and folders                            
+                              while disk level encryption using methods like Bit Locker, safeguards entire storage devices whether it's protecting
+                              individual files or ensuring that an entire system is secure, encryption is a
+                              powerful defense against unauthorized access and for portable devices let's not forget about Bit Locker to Go which
+                              ensures that sensitive data remains encrypted and safe even when stored on USB drives. Together these methods
+                              provide a robust solution to keep your data safe no matter where it
+                              rests.  
+                            </i>
+                          </li>
+                        </ul>
+
+                          <br>
+                          <h5>Password Best Practices</h5>
+                          <p>Passwords serve as a primary method of authenication but surprisingly
+                            many individuals often overlook their significance. Fortunately there are established password policies and best practices that guide users at creating robust passwords, ensuring enhanced protection for both personal and professional data
+                            in our digital landscape. First and foremost why are good password practices so essential, think of passwords as the
+                            keys to your digital home, just as you wouldn't want a flimsy lock on your front door you wouldn't want a weak
+                            password guarding your personal and professional data. Strong password practices ensure that your digital doors
+                            remain locked against potential Intruders.</p>
+                          <h6>Password Policies</h6> 
+                          <br>
+                          <i>Which are designed to fortify our digital security. To kick things off I will start with a
+                            well-known policy the.</i>
+                            <br>
+                            <br>
+                            <ul>
+                              <p>
+                                <b>Password Length Policy</b>. This policy is an uncomplicated
+                                yet vital aspect of digital security at its Essence this policy determines the minimum and maximum number of characters
+                                that a password should contain picture this in terms of a physical safe just as a physical safe might have a combination
+                                code of varying lengths a password has its own length criteria the analogy runs
+                                deeper when you consider the security implications for a physical safe, a longer combination with more numbers or
+                                sequences to guess naturally becomes more challenging for a thief to decipher similarly in the digital realm a longer
+                                password inherently possesses more potential combinations of characters. This increased variability makes it
+                                exponentially harder for malicious actors to guess or use brute force attack methods against your
+                                password in close relation to password length a 
+                              </p>
+                              <p>
+                                <b>Password Complexity Policy</b> is
+                                also common practice. This policy EMP emphasizes the need for a diverse mix of characters in your password it
+                                recommends using a combination of uppercase letters, lowercase letters, numbers and special characters such a
+                                varied composition not only ensures your password's uniqueness but also strengthens its defense against typical
+                                hacking methods. A password with this mix is much harder for hackers to guess or breach using Brute Force techniques. It's
+                                also crucial to avoid using dictionary words in your password regardless of their length. Hackers often use
+                                dictionary attacks where they methodically test variations of common dictionary words to decipher passwords
+                                by incorporating a variety of character types and steering clear of standard dictionary words you substantially lower
+                                the chances of falling victim to password guessing attacks next we have the 
+                              </p>
+                              <p>
+                                <b>Password History Policy</b>. This policy's primary objective is to deter users from reusing their recent passwords by monitoring and
+                                remembering your past passwords the system system can ensure that when you're prompted to update your password
+                                you're guided towards crafting a new and unique one this proactive approach to password management is designed for
+                                mitigating risks for example if an old password was ever compromised ensuring
+                                it's not reused eliminates the chance of that particular password ever becomes a recurring security weak point in a
+                                nutshell the password history policy serves as a protective measure encouraging users to consistently renew
+                                their passwords thereby enhancing their overall digital
+                                security. our next policy the 
+                              </p>
+                              <p>
+                                <b>Password Expiration Policy</b> complements the
+                                previously discussed password history policy by setting an expiration date on your passwords ensuring they don't
+                                remain static for too long this forces users to refresh their passwords at regular intervals reducing the time a
+                                potentially compromised password can be exploited much like regular maintenance on machinery or software changing your
+                                passwords regularly is essential to keeping your digital security strong this consistent cycle of change also
+                                reduces the window of opportunity for malicious actors to exploit a possibly compromised
+                                password. now let's talk about the 
+                              </p>
+                              <p>
+                                <b>Password Lockout Policy</b> have you ever mistyped your password several times and
+                                got locked out of your account well that is this policy at work the primary purpose of the password lockout policy
+                                is to hinder unauthorized users from endlessly guessing your password. The policy works in a straightforward
+                                matter after a set number of incorrect login attempts the account gets locked and remains inaccessible for a certain
+                                time or until an admin unlocks it. This strategy not only stops hackers in their tracks but also signals potential
+                                unauthorized access attempts to administrators.
+                              </p>
+                            </ul>
+                            <br>
+                            <h6>Key Practices</h6>
+                              <br>
+                              <br>
+                              <ul>
+                              <p>
+                                <b>Setting a BIOS or UEFI Password</b>
+                                <p>These passwords add critical layer of security before the operating system even starts preventing unauthorized
+                                users from accessing the systems core settings located in the BIOS or UEFI of the system. Having this type of password
+                                in place can block actions like enabling or disabling hardware components or even enabling hardware virtualization, so be
+                                sure to set up a BIOS or UEFI password if you want to ensure that only authorized individuals can make such
+                                changes.</p>
+                              </p>
+                              <p>
+                                <b>Change the Default Administrator's User Account and Password</b>
+                                <p>
+                                  Many systems including routers and network devices come with a default admin account and password which are well known to
+                                  attackers, changing this default password reduces the risk of unauthorized access
+                                  and adds an additional layer of defense. 
+                                </p>
+                              </p>
+                              <p>
+                                <b>Multi-Factor Authentication</b>
+                                <p>
+                                  By enabling MFA you require users to provide not only a
+                                  password but also a secondary form of authentication like a fingerprint, facial recognition or a code sent to their
+                                  phone this added step makes it exponentially harder for attackers to access your accounts even if they manage
+                                  to get hold of your password.
+                                </p>
+                              </p>
+                              <i>
+                                Together these password best
+                                practices work to create a robust defense against unauthorized access protecting your personal and
+                                professional data in today's digital landscape.
+                              </i>
+                            </ul>
+                            
+                          </p>
+
+                          <br>
+                          <h5>End-User Best Practices</h5>
+                          <p>When it comes to keeping your data and devices secure it's not just about passwords. Good security also
+                            includes a few end user best practices. 
+                            Exploring some key habits and tools that every end user should implement for a more secure IT environment. 
+                            <ul>
+                              <p>
+                                <b>Enabling a screen saver lock</b> - a timeout or screen lock
+                                ensures that after a period of inactivity your computer automatically locks returning the user to the login
+                                screen this is particularly helpful if you step away from your computer but forget to manually log out in Windows 10
+                                you can set this up by accessing your lock screen settings just make sure that the screen saver is configured to
+                                require a password when the computer wakes up from sleep or resumes after a period of inactivity by using this
+                                simple feature you you ensure that your session remains protected and no one can access your device without re-entering
+                                the appropriate password.
+                              </p>
+                              <p>
+                                <b>Log off or lock your computer not in use</b> - the quickest way to do this is by using a key combination,
+                                for Windows you can press Windows + 'L' key to instantly log out as a user.
+                                This prevents anyone from accessing your system while you're away even for a short time. It's a quick simple action
+                                and does not rely on a wait timer like the screen saver lock. Securing your physical devices is
+                                just as important to securing your data, laptops for instance are highly portable
+                                making them easy targets for theft whether you're at home, in the office or traveling always ensure your laptop is
+                                stored securely. When not in use consider using physical locks, security cables or
+                                carrying your laptop in a bag that doesn't draw attention, additionally if your laptop contains sensitive data
+                                ensure it's encrypted or secured with tools like Bit Locker or File
+                                Vault. 
+                              </p>
+                              <p>
+                                <b>Protecting your personally identifiable information and passwords</b> 
+                                 - never store passwords in plain text whether on your computer or written down, instead use a Password
+                                Manager to generate and securely store complex passwords also be cautious about
+                                where and how you share personally identifiable information both online and in person. The more careful you are
+                                with your sensitive information the less likely it is to be
+                                compromised. 
+                              </p>
+                              <i>By incorporating these simple end-user best practices you can greatly reduce the risk of unauthorized
+                              access and keep your data safe, these habits are essential for every end user regardless of the device or system they
+                              use.</i>
+                            </ul>
+                          </p>
+
+                          <br>
+                          <h5>Account Management</h5>
+                          <p>Explore how to restrict access, manage user permissions and keep those digital doors tightly shut.</p>
+                          <ul>
+                          <p><b>Restricting user permissions</b> - not everyone needs access to everything and
+                            that's where the principle of least privilege which we discussed earlier comes into play this principle ensures
+                            that users only have the access necessary to perform their specific tasks nothing more by limiting
+                            permissions you reduce the risk of unauthorized access or accidental changes to critical areas of the
+                            system.</p>
+                            <p><p><b>Restricting login times</b> - 
+                            limiting when users can log in adds another layer of control imagine your system as a building with office hours
+                            outside those hours no one should be wandering in or out setting login Windows like no access on the weekends
+                            ensures that users Can Only log in during specific times when their work is expected this prevents anyone from
+                            trying to access the system during off hours when it's most vulnerable it's an extra safeguard that ensures your system
+                            remains protected even when everyone else has clocked out.</p>
+                            <p><b>Disabling the Guest Account</b> - the guest account is like leaving a spare key
+                            under the mat it is convenient sure but it is also an open invitation for anyone
+                            to come in by disabling the guest account you prevent unauthorized users from slipping in unnoticed and gaining
+                            temporary access to your system locking down this entry point ensures that no one without a proper account can sneak
+                            in.</p>
+                            <p><b>Disabling auto run and autoplay</b> - auto run automatically runs a program when a device is
+                            connected while autoplay allows audio visual content to start playing automatically as far as security is
+                            concerned both can be risky. Imagine plugging in a USB drive and having a malicious file automatically execute. 
+                            By disabling auto run and autoplay you ensure that no file can run or open without your explicit permission, this
+                            simple action blocks potentially harmful software from sneaking
+                            in. </p>
+                          </ul>
+                            <i>
+                              So to sum it all up you should restrict user permission, limit login
+                              times, disable the guest account, and disable auto run and autoplay to prevent malicious files from automatically
+                              opening. With these account management best practices you'll have your system running tighter than Fort
+                              Knox.
+                            </i>
+                          </p>
+                        
+                        <br>
+                        <h3 id="simple-list-item-7">Mobile & Embedded Device Security</h3>
+
+                        <br>
+                        <h5>Mobile Device Security</h5>
+                        <ul>
+
+                          <p><b>Screen locks</b> - act as a
+                            first line of defense against unauthorized access just like on a workstation a screen lock ensures that
+                            your mobile device is protected when left unattended whether you choose facial recognition, fingerprint, pin codes,
+                            pattern or swipe as your authentication method each method offers varying levels of security. While options like facial
+                            recognition and fingerprint are more secure and convenient methods like swipe offer very little protection and are
+                            best avoided for securing sensitive information.</p>
+                            <p><b>Failed login attempt restrictions</b> - this is a key feature that locks out a user
+                            after several incorrect password attempts protecting against Brute Force attacks where hackers repeatedly guess
+                            login credentials, just like on a workstation this simple but effective safeguard prevents unauthorized users
+                            from gaining access by sheer persistence. </p>
+                            <p><b>Locator Applications</b> - 
+                              if your device is ever lost
+                              or stolen locator applications can be a lifesaver features like find my iPhone
+                              or find my device allow you to track the location of your mobile device giving you a chance to recover it quickly these
+                              tools provide Peace of Mind by helping you locate your mobile device in real time whether it's misplaced or
+                              taken.</p>
+                            <p><b>Remote Wipe</b> - 
+                              if recovery isn't possible, that's where remote wipe comes in with this feature you can remotely
+                              erase all the data on your lost or stolen device. This ensures that even if the hardware is gone your sensitive data
+                              remains safe, inaccessible to whoever might have your device it's a last resort measure but one that's critical
+                              for protecting your personal or professional information</p>
+                            <p><b>Device Encryption</b> - 
+                              another essential layer of security, just like on workstations, encrypting your mobile
+                              device ensures that all data stored on it is unreadable without the proper credentials. If your device falls into
+                              the wrong hands encryption guarantees that even with physical access the data remains secure and protected. now you
+                              might recall the acronym fde which typically stands for full disc encryption this is common on
+                              workstations but on mobile devices it's often referred to as full device encryption. This means that the entire
+                              contents of your mobile device whether it's apps, contacts or personal files are
+                              fully encrypted safeguarding everything from unauthorized
+                              access.</p>
+                            <p><b>Backups</b> - 
+                              backing up your data is just as important for mobile devices as it is for workstations.
+                              Remote backup applications such as iCloud or Google Drive allow you to store your mobile device data securely
+                              in the cloud. In the event of data loss having these backups ensures that your important files, photos and contacts can
+                              be easily restored giving you an extra safety net.</p>
+                            <p><b>AntiVirus or Anti-Malware software</b> - 
+                              help detect and block malicious apps before they can cause harm. Installing a reliable anti virus
+                              solution is essential especially if you download apps from third party
+                              sources.</p>
+                            <p><b>Firewalls</b> - 
+                              a helpful tool for monitoring and controlling network
+                              traffic. A firewall can alert you when an unapproved app tries to communicate with the internet adding another layer of
+                              security to prevent unauthorized data transfers or breaches.</p>
+                            <p><b>Keeping your device's software up to date</b> - 
+                              OS updates are crucial for patching vulnerabilities and protecting against non exploits just
+                              like with workstations regularly updating your mobile device ensures that it has the latest security enhancements
+                              making it much harder for attackers to exploit weaknesses in outdated software.</p>
+                          </p>
+                        </ul>
+
+                          <br>
+                          <h5>BYOD vs Corporate Owned</h5>
+                          <p>mobile devices have become a vital part of corporate environments offering
+                            flexibility, communication and productivity on the go, from emails to business apps these devices are
+                            indispensable but with this increasing reliance comes a critical decision for organizations whether to issue corporate
+                            owned devices or allow employees to use their own personal devices also known as BYOD.</p>
+                            <ul>
+                              <p><b>Corporate owned</b> - when a company provides mobile devices to employees it retains full control over their configuration, ation
+                                and usage. These devices are typically pre-loaded with necessary software and security settings ensuring they meet the
+                                organization specific needs. With Corporate owned devices, companies can enforce strict profile security
+                                requirements limiting which apps can be installed and ensuring sensitive data is encrypted. This approach also allows for
+                                full monitoring of the device's activity ensuring compliance with corporate policies. The downside, employees may feel
+                                restricted by the policies and forced on corporate owned devices and it can be costly for the company to purchase and
+                                maintain an entire fleet of devices.</p>
+                              <p><b>BYOD</b> - 
+                                bring your own device or BYOD
+                                provides an alternative to corporate owned devices allowing employees to use their personal devices for work.
+                                This setup has some definite perks, companies don't need to invest as heavily in device purchases
+                                and employees often appreciate using familiar devices, however, this freedom comes with potential risks. Security is a
+                                major concern as personal devices might not meet the same security standards as corporate owned onesI it's harder to
+                                enforce consistent updates, data-encryption or limit apps on a personal device. Additionally separating personal
+                                data from corporate data can be challenging raising, concerns about privacy for both the company and the
+                                employee.
+                              </p>
+                              <br>
+                              <i>
+                                a policy that permits employees to bring personally-owned devices to the workplace and use them to
+                                access company resources.
+                              </i>
+                              <br><br>
+                              <h6>The solution to the security pitfalls of BYOD</h6>
+                              <p>
+                                <b>Mobile Device Management</b> - with MDM
+                                companies can enforce compliance on mobile devices by applying consistent security policies across the board, this
+                                ensures that all devices whether corporate issued or personally owned meet the same stringent security
+                                requirements.
+                              </p>
+                              <h6>How does MDM work?</h6>
+                              <p>
+                                An MDM works by allowing administrators to remotely control certain aspects of a mobile device such
+                                as managing application installations, enforcing encryption, and setting security protocols, for example a company
+                                can specify which apps are allowed to be installed and block unauthorized or risky apps. Additionally, encryption
+                                policies can be enforced to safeguard company data ensuring that sensitive information is protected even if a
+                                device is lost or stolen.
+                              </p>
+                              <h6>What can MDM do?</h6>
+                              <p>
+                                One of the biggest advantages of MDM is its ability to perform remote wipes if a device is
+                                compromised, lost or stolen. MDM can remotely delete sensitive data from the device protecting the company from
+                                potential breaches, this feature is particularly important in a BYOD environment where personal and corporate
+                                data may coexist on the same device. Wait there's more MDM can track the
+                                device's location and ensure it remains compliant with security protocols such as regular OS updates, password strength,
+                                and access control settings. With all these MDM features organizations can minimize risks associated with mobile
+                                devices be it corporate issued or personally owned.
+                              </p>
+                              </p>
+                            </ul>
+                             
+                            
+
+                          <br>
+                          <h5>IoT Device Security</h5>
+                          <p>The Internet of Things also known by the acronym iot refers to a
+                            network of physical devices, objects and sensors that are connected to the internet allowing them to collect
+                            exchange and transmit data.</p>
+                            <ul>
+
+                              <h6>IoT devices include:</h6>
+                              <ul>
+                                <li>Home Appliances</li>
+                                <li>IP Cameras</li> 
+                                <li>Home Automation Systems</li> 
+                                <li>Streaming Media Devices</li> 
+                                <li>Modern Car Electronics</li> 
+                                <li>Medical Devices</li>
+                              </ul>
+                              <br>
+                             <i>These iot devices are also considered embedded devices which means they are designed to perform specific tasks. Unlike general
+                              purpose computers embedded devices typically run specialized software to interact with hardware and accomplish
+                              dedicated functions. While iot and embedded devices bring significant convenience and automation to everyday
+                              life they also present serious security challenges as many are not designed with security in
+                              mind. To reiterate, one of the key security issues with iot and embedded
+                              devices is that their.</i>
+                              <br>
+                              <br>
+                              <h6><b>Manufacturers Often Prioritize Functionality Over Security</b></h6>
+                              <p>This focus can result in
+                              devices that come with weak default passwords, lack proper encryption, or miss out on regular updates and security
+                              patches. Additionally, embedded devices are typically built to perform specific tasks meaning they often run outdated
+                              software and have limited hardware resources making it difficult to implement more advanced security
+                              features because these devices often share the same network as more critical systems attackers can exploit the
+                              vulnerabilities in iot and embedded devices in order to gain entry into your
+                              network.</p> 
+                              <br>
+                              <h6>Improving the security of iot and embedded devices</h6>
+                              <br>
+                              <ul>
+                                <li><b>Change default usernames and passwords</b> - crucial to prevent unauthorized access.</li>
+                                <li><b>Perform firmware update regularly</b> - many devices ship with known default credentials making them an easy target for attackers.
+                                  Regularly updating the firmware and applying security patches can also protect against known vulnerabilities.</li>
+                                <li><b>Implement Network segmentation</b> - an effective strategy for isolating iot devices from more sensitive systems
+                                    reducing the potential damage in the event of a breach.</li>
+                                <li><b>Implement Data Encryption</b> - important for ensuring that intercepted data remains secure.</p></li>
+                              </ul>
+                            </ul>
+
+                        <br>
+                        <h3 id="simple-list-item-8">Data Destruction & Disposal Methods</h3>
+                        <p>Let's explore the best methods to ensure that your data is not
+                          only deleted but gone for good. Sometimes the most effective way to
+                          guarantee that data is permanently unrecoverable is through physical destruction especially when a hard drive
+                          or device no longer needs to be reused. Physical destruction ensures that the storage media itself is damaged or
+                          destroyed in such a way that any attempt to recover data is impossible.</p>
+                          <ul>
+
+                            <br>
+                            <h6><b>Drilling</b></h6>
+                            <!-- <p>One of the least secure methods</p> -->
+                            <p>This would involve drilling holes through the platters of a hard disk drive this is often seen as a
+                              quick and satisfying approach because it physically damages the core components of the drive
+                              however it's not always foolproof if the holes don't destroy enough of the platters or critical sections there is
+                              still a chance that data from the undamaged areas can be retrieved using specialized recovery tools.</p>
+  
+                            <br>
+                            <h6><b>Degaussing</b></h6>
+                            <!-- <p>A more secure method for hdds.</p> -->
+                            <p>This method involved the use uses a powerful magnetic field to disrupt the data
+                              stored on the dri's magnetic platters by scrambling the magnetic charges deussing
+                              renders the data unreadable.</p>
+
+                            <br>
+                            <h6><b>Shredding</b></h6>
+                            <p>In this method the drive is fed into a machine that breaks it into tiny fragments much like how a paper shredder
+                              Works once the drive is shredded the pieces are so small that reassembling and recovering data is practically
+                              impossible this method is ideal for companies that need to destroy large volumes of drives and want peace of mind
+                              that their data is gone for good.</p>
+
+                            <br>
+                            <h6><b>Incinerating</b></h6>
+                            <p>Incinerating the
+                              drive involves melting the drive down in a high heat environment this method leaves no chance for data recovery and
+                              is typically reserved for situations where the highest level of data security is
+                              required.</p>
+
+                            <br>
+                            <h6>If you want to reuse a drive:</h6>
+                            <br>
+                            <h6><b>Recycling or Repurposing</b></h6>
+                            <p>
+                              Recycling or Repurposing is a better approach
+                              allowing you to make use of the hardware again while ensuring that sensitive data doesn't fall into the wrong hands. Before
+                              you can safely reuse a drive it's essential to securely sanitize any existing data especially if the drive
+                              was/is used to store confidential information. There are several methods available each with varying degrees of
+                              security, some common methods are:
+                            </p>
+                            <ul>
+                              <p><b>Standard Formatting</b> -
+                                often referred to as a quick format this method is quick and easy and
+                                it's readily available in most operating systems during a standard format the system essentially removes the
+                                references or pointers to the files on the drive making the data appear inacessible however it's important to
+                                note that the actual data remains on the drive hidden beneath the surface with the right data recovery tools that
+                                information can often be restored standard formatting is sufficient for scenarios where speed is prioritized and
+                                the drive isn't storing sensitive data.
+                              </p>
+                              <p><b>Erasing/ Wiping</b> - 
+                                the drive's data is overwritten with random patterns of zeros and ones effectively scrambling the original
+                                information and making it much harder to recover while this takes a bit more time erasing or wiping the data is a much
+                                safer Choice when you need to prevent unauthorized access to previously stored information the overwritten data becomes
+                                jumbled and unreadable reducing the risk of recovery through conventional means.
+                              </p>
+                              <p><b>Low-level Formatting</b> - 
+                                this process goes beyond just removing
+                                file references and overwriting data low-level formatting resets the drive to its original Factory condition by
+                                rewriting every single sector of the drive with zeros and ones as essentially wiping the Slate clean this method makes
+                                it almost impossible to recover any data even with Advanced forensic tools lowlevel formatting is often used when
+                                repurposing drives that previously contained critical information such as Financial records or personally
+                                identifiable information it's the go to solution when the stakes are high and data security is
+                                non-negotiable.
+                              </p>
+                              <i>
+                                in certain cases companies may prefer to Outsource Data Destruction to a third-party vendor when
+                                doing this it's important to ensure that the vendor provides a certification of Destruction confirming that the data has
+                                been securely destroyed or that the drives have been properly recycled this is especially important when dealing
+                                with sensitive or regulated data as it provides peace of mind and proof of
+                                compliance.
+                              </i>
+                            </ul>
+                          </ul>
+
+                        <br>
+                        <h3 id="simple-list-item-9">Security Settings in SOHO Networks</h3>
+
+                        <p>When setting up or securing a small office home office also referred to as a SOHO Network, proper security
+                          configurations are critical, it safeguards your network from unauthorized access, maintains reliable
+                          connectivity, and keeps your data secure.</p>
+                        <ul>
+                          <p><b>Soho router</b> - the bouncer of your network, it stands between your devices and the vast wild internet making it your first line of
+                            defense against potential intrusions. In order to protect this device from would be attackers a quick change to the
+                            default username and password should be performed ASAP. Most routers come with generic admin credentials that make it
+                            way too easy for hackers to crash your digital party, many routers will even nudge you to do this during setup so
+                            don't ignore it and instead put it first on the list.
+                          </p>
+                          <p><b>Mac Filtering</b> - restricting access based on a device's Media Access Control address also known
+                          as a MAC address. Think of a MAC address like the fingerprint of each device on your network. By enabling Mac filtering
+                          you can create a guest list of approved devices, meaning only trusted devices will be allowed to join your network.
+                          It's a solid extra layer of security because if someone tries to sneak in without an invite they'll be promptly
+                          shown the door.</p>
+                          <p><b>Firmware updates</b> - (Updating your router's firmware) often include critical security patches and improvements keeping your network one step ahead of the bad guys.</p>
+                          <p><b>Content Filtering</b> - if you're running a family-friendly network or just trying to keep distractions in
+                            check. Content Filtering is a handy feature, this lets you block certain websites or content categories, sift
+                            through emails or monitor Network traffic based on specified rules. So whether the intention is to keep
+                            inappropriate materials at bay or just ensuring your employees don't spend all day watching cat videos content
+                            filtering is your ally.
+                          </p>
+                          <p><b>Physical Security</b> - 
+                            it's not just about fancy encryption and passwords make sure your router is in a secure location
+                            preferably not somewhere anyone can easily tamper with it leaving it out in the open is like hiding the keys to the
+                            house under the welcome mat don't make it that easy.
+                          </p>
+                          <p><b>DHCP reservationson</b> - sometimes you may want a
+                            specific device like your printer or a server to always have the same IP
+                            address that's where DHCP reservations come in handy by using a device's unique
+                            Mac address you can reserve a specific IP address for that device this ensures
+                            that every time the device connects it gets the same IP address which is particularly useful for remote access or
+                            when you need a stable reliable Connection.
+                          </p>
+                          <p><b>Static WAN/LAN</b> - 
+                            in addition to setting a DHCP
+                            reservation for a local IP address there may be times when setting up a static WAN or Wide Area Network IP address for
+                            the router will be necessary if you've got services that need a consistent public IP address like a web server
+                            setting up a static wide area network IP ensures that your Network's front door to the internet doesn't move imagine
+                            running a business where the store's physical address keeps changing every day customers would get frustrated
+                            trying to find you and eventually they might just give up in the same way if your wide area network IP address keeps
+                            changing it's like your digital storefront is constantly relocating making it hard for customers to find you
+                            a static IP is like locking down that address ensuring your store stays in the same spot so visitors know exactly where
+                            to find your website or Services every time it brings consistency and reliability to your internet presence
+                            much like a fixed address does for a brick and mortar store.
+                          </p>
+                          <p><b>Universal Plug and Play</b> - 
+                            a set of networking protocols
+                            that allows devices on the same network to discover and automatically connect to each other sounds like a dream right
+                            devices on your network automatically finding and connecting with each other but hold up while UPnP makes it easy for
+                            a device like your smart TV to talk to another device like a media server it
+                            can also leave the door wide open for malicious devices to sneak in and open ports without your permission so unless
+                            unless you really need it it's best to disable UPnP and avoid giving hackers a free pass to your
+                            network.  
+                          <p><b>Screened Subnet / DMZ</b> - 
+                            DMZ or demilitarized zone. Imagine your network as a secure building with the most critical systems
+                            and sensitive data stored inside now picture a fenced off area outside the building where you can place devices
+                            that need to interact with the public like web servers or email servers this fenced off area or DMZ allows those
+                            devices to engage with the outside world while keeping them at a safe distance from your main Network think of it like
+                            this visitors can access services in the fenced area but they can't just stroll into the building where your important
+                            systems are kept if anything in the DMZ like a web server or email server gets
+                            compromised it's confined to that outer area preventing Intruders from getting past the fence and reaching the heart of
+                            your network this adds a crucial layer of security ensuring that even if something goes wrong in the DMZ the rest
+                            of your network remains protected the DMZ is perfect for situations where you need to expose services to the internet
+                            without putting the core of your network at risk.
+                          </p>
+                          <i>
+                            To sum it all up securing your SOA
+                            network isn't just about locking the front door it's about building a multi-layered defense that keeps the bad
+                            guys out and your data safe from changing default passwords to keeping your router's firmware up toate enabling
+                            Mac filtering and setting up a DMZ each step brings you closer to a secure reliable Network and remember whether
+                            you're protecting a small business or your own home network a little proactive effort goes a long way in keeping
+                            everything running smoothly.
+                          </i>
+
+                          <br>
+                          <br>
+                          <h5>Wireless Settings</h5>
+                          <br>
+                          <p>Whether you are setting up and configuring an access point, a wireless
+                            router or a Soho router there are common tasks that should be performed to maintain the security of your wireless
+                            network and this list can be extensive but for now we will be focusing on just
+                            a few configuration settings. 
+                          </p>
+                          <ul>
+                            <p>
+                              <b>Changing the SSID</b> - when first configuring a wireless device is a
+                              security best practice that is designed to enhance the overall security of your network. most routers come with default
+                              SSIDs set by the manufacturer. These default names are often well-known and can be easily identified. Malicious actors
+                              might use this information to specifically target networks with default settings for potential
+                              attacks.
+                            </p>
+                            <p>
+                              <b>Disabling SSID broadcast</b> - means your network's name won't appear when nearby devices scan for available Wi-Fi.
+                              This can be beneficial as it adds a layer of obscurity to your network making it less visible to Casual users or potential
+                              attackers who might target easily detectable networks. It's a simple way to enhance security by keeping your network
+                              under the radar, however, disabling SSID broadcast can also be inconvenient,
+                              Devices won't automatically detect your network so you'll have to manually configure each device with a network
+                              name which can be time consuming especially if you have multiple devices. Additionally, this won't stop more
+                              sophisticated attackers who use tools to discover hidden networks so while disabling SSID broadcast may give you a
+                              bit of extra peace of mind it's not a foolproof solution and should be combined with other security measures
+                              like strong encryption. 
+                            </p>
+                            <p>
+                              <b>Open Authentication</b> - (Leaving your wireless network unencrypted) allows unrestricted
+                                access to the network without requiring a password or authentication credentials, this can be useful in public spaces or
+                                guest environments to offer convenient and seamless internet access to a wide range of users. A perfect example would
+                                be a popular coffee shop in the heart of the city, with an open authentication wireless network in place, customers can
+                                easily connect to the internet without the need for a password or any authentication process. This makes it
+                                hassle-free for patrons to use their laptops, smartphones or tablets, in doing
+                                so users do need to be aware that they are responsible for their own data security while using the open network.
+                                Using an unencrypted wireless network is risky due to lack of password security protocols. Without encryption information
+                                on the network can be seen by others so try not to log into your bank account while connected to one of these
+                                networks.
+                            </p>
+                            <p>
+                              <b>Encrypted networks</b> - 
+                              <ul>
+                                <li>
+                                  <h6>WEP</h6>
+                                  <p>
+                                    this is the oldest and weakest of the encryption standards WEP used an rc4 encryption mechanism
+                                    which had some serious security flaws and could be easily cracked by determined hackers so it's best to avoid
+                                    using WEP and opt for a more secure option.
+                                  </p>
+                                </li>
+                                <li>
+                                  <h6>WPA</h6>
+                                  <p>
+                                    Was an improvement over we and offered better security it
+                                    used a more robust encryption mechanism known as tkip this made it a bit harder for attackers to break into your network
+                                    however like WEP WPA is also considered outdated and not the best choice for
+                                    modern Wi-Fi security.
+                                  </p>
+                                </li>
+                                <li>
+                                  <h6>WPA2</h6>
+                                  <p>
+                                    This is a
+                                    more Modern Standard for securing Wi-Fi networks and has been widely used for years WPA2 uses a stronger encryption
+                                    mechanism known as AES. AES is highly secure and much more difficult for
+                                    attackers to crack if you have a relatively new router it will likely support WPA2.
+                                  </p>
+                                </li>
+                                <li>
+                                  <h6>WPA3</h6>
+                                  <p>
+                                    The most advanced wireless
+                                    encryption standard to date, WPA3 builds on the strengths of WPA2 and adds even
+                                    more security features such as the SAE encryption mechanism. WPA3 is currently
+                                    the gold standard for Wi-Fi security and, if your wireless network device supports it, it is the best choice for keeping
+                                    your network safe.
+                                  </p>
+                                </li>
+                              </ul>
+                            </p>
+                            <p>
+                              <b>Whether or not to allow guest access</b> - 
+                              many routers offer a guest network option which might seem like a
+                              friendly feature to allow visitors to use your Wi-Fi without giving them access to your main Network, however, from
+                              a security perspective leaving guest access enabled can open up vulnerabilities if not properly managed.
+                              Guest networks often have weaker security settings and someone with malicious intent could exploit this open
+                              door to attempt attacks on your primary network or even on connected devices. By disabling guest access you ensure that
+                              only devices with proper credentials can access your network adding another layer of security. Now if you do need to
+                              provide internet access to visitors, consider setting up a secure guest network with a strong password that you
+                              update regularly, this way you still maintain control without sacrificing security for
+                              convenience.
+                            </p>
+                            <p>
+                              <i>If you're dealing with performance</i>
+                              <b>Channel Selection</b> -
+                              imagine tuning into a radio station where each station is set to a specific frequency for clear reception.
+                              Similarly in Wireless networking a wireless frequency channel is a designated band of frequencies used for
+                              transmitting and receiving data, each separated in order to prevent interference and ensure smooth communications. 
+                              By changing the wireless channel to a less crowded one you can improve your Network's performance, for example
+                              channels 1, 6, and 11 are usually the best options in the 2.4 GHz range because
+                              they don't overlap. If you're using a router that operates in the 5 GHz frequency range you'll have even more
+                              channel options with less interference. Using network scanning tools can help you determine which channels are the
+                              least crowded in your area allowing you to switch to a clearer channel and boost your Wi-Fi
+                              performance.</p>
+                            </p>
+                            <p>
+                              <b>SOHO Firewall Settings</b>
+                              when setting up a small office or home office Network configuring your Soho firewall is yet another way to
+                              ensure security. The firewall acts as the network's gatekeeper controlling which data is allowed in and out of the local
+                              area network helping to prevent unauthorized access while allowing legitimate traffic through.
+                              Two key firewall settings that directly impact how your Soho router Network handles
+                              Network traffic:
+                            </p>
+                              <p>
+                                <b>Disabling in used ports</b> - ports are like
+                                virtual doors on your network that allow specific types of data in and out. If a door or port is open but not being used
+                                it can become a security risk as attackers might exploit to gain unauthorized access. By disabling these
+                                unused ports you're essentially closing those doors tightening the security of your network and limiting access to only
+                                the essential traffic once you've explicitly allowed the ports that are necessary for your Network's
+                                functionality such as those needed for web traffic or email it's a best practice to implement a deny all rule
+                                for any other ports this means that only the specified permitted ports are open and all other traffic is automatically
+                                blocked by taking this approach you further reduce the chances of unauthorized access and make your
+                                network more secure.  One final Point universal plug and play or UPnP can
+                                automatically open ports if you want to maintain strict control over which ports are open you may need to disable this
+                                feature to ensure that only your specified ports are allowed now let's move on to port
+                                forwarding which is important when you need to allow external traffic to access a specific service inside your network.
+                              </p>
+                              <p>
+                                <b>Port Forwarding</b> - sometimes referred to as Port mapping is the process of redirecting communication requests from
+                                one address and port number to another this occurs when data packets are received by the network gateway to say
+                                it another way port forwarding allows external devices to connect to a particular service or device within your
+                                network by mapping the external port to the internal IP address of the device hosting the
+                                service for example what if your compy hosts a public website on an internal server but customers need to access it
+                                from outside the local area network if that is the case then port forwarding would ensure that incoming web traffic
+                                is routed directly to the web server inside your network.
+                              </p>
+                            </ul>
+                            </p>
+                          </ul>
+                          
+                        <br>
+                        <h3 id="simple-list-item-10">Browsers & Relevant Security Settings</h3>
+                        <p>.</p>
+
+                        <br>
+                        <h6>Browser Downloads</h6>
+                        <p>When downloading files through a browser or from the Internet it's important important to be mindful of
+                          security to protect your computer. 
+                          <ul>
+                            <p>
+                              <b>Download files from websites you know and trust</b> -
+                              these include official sites like Microsoft Adobe or other well-known
+                              platforms when you download from these places you can feel confident that the download file hasn't been tampered with
+                              for example if you need Adobe Reader you should go directly to adobe's website instead of a random download link you
+                              found online this is because trusted sources significantly lower or the risk of downloading something
+                              harmful. 
+                            </p>
+                            <p>
+                              <b>Untrusted Sources</b> - 
+                              these are sites that might look legitimate but are unfamiliar or come
+                              from unknown links in emails or social media. Downloading files from these places is risky even if the file looks
+                              like what you wanted, it could be hiding malware, viruses or spyware, so if you're
+                              ever unsure about where a file is coming from it's better to be safe and avoid downloading it.    
+                            </p>
+                            <p>
+                              <i>
+                                An extra step you can take after downloading a file to ensure it's safe before installing it on your system.
+                              </i>
+                              <b>Hashing</b> - a process that takes the contents of a file and runs it through a
+                              mathematical algorithm to create a unique string of characters known as a hash or check sum. This hash is like a
+                              digital fingerprint with no two files having the same hash unless their contents are exactly
+                              identical. Developers often provide this hash next to the download link on their website. Once you've downloaded the file
+                              you can generate the hash on your computer and compare it to the one provided by the developer, if the two
+                              match you know the file is exactly as it should be but if the hash is different that means something has changed maybe
+                              the file was corrupted during the download or worse tampered with by someone trying to add harmful
+                              code.
+                            </p>
+                          </ul>
+                          </p>
+
+                          <h5>Browser Extensions</h5> 
+                          <p>
+                            Also known as add-ons or plugins are software programs that integrate with your web browser they are designed to extend the
+                            functionality of the browser and provide extra features for tasks like add and script blocking language translation
+                            password management and much more while extensions and plugins can be extremely useful it's important to be cautious
+                            about where you get them as they can also Poe security risks
+                            when adding extensions to your browser it's always best to use trusted sources this typically means using the official
+                            extension store for your browser like the Chrome Web Store Firefox add-ons or Microsoft Edge add-ons site extensions
+                            found here have usually undergone some form of review process to ensure they're safe to use trusted sources provide
+                            extensions that are more likely to be secure updated regularly and compatible with your browser also be sure to check
+                            the permissions request Ed by the extension for example if an ad blocker is asking for permission to access all
+                            your data that's a red flag.
+                          </p>
+                          <p>
+                            <b>Installing Extensions from untrusted sources</b> -
+                            Can lead to serious security issues, extensions from unofficial websites,
+                            random links, or even shady email attachments can be risky. They might contain malware, spyware or code that
+                            tracks your online activity some malicious extensions even masquerade as useful tools, but can hijack your
+                            browser redirecting you to unwanted sites or bombarding you with popups. To
+                            stay safe avoid installing extensions from sites you don't recognize or links that weren't directly recommended by a
+                            trusted source, even if an extension looks legitimate its code might be altered or designed to steal your data.
+                            stick to well-known and reviewed extensions and if something seems suspicious it's best to steer
+                            clear.
+                          </p>
+
+                          <br>
+                          <h5>Password Managers</h5>
+                          <p>password managers are essential tools that can significantly improve your online security by helping you
+                            create, store and manage strong unique passwords for all your accounts. A
+                            password manager is a software application that securely stores your login credentials in an encrypted format.
+                            It acts like a digital Vault keeping all your passwords safe in one place while allowing you easy access to them
+                            when needed. Using a password manager reduces the risk of using weak or reused passwords which are common mistakes that
+                            make accounts vulnerable to hackers, instead it allows you to generate complex passwords for each of your
+                            accounts making it harder for attackers to break in even if one account is compromised. Password managers also
+                            eliminate the need to remember multiple passwords since they can automatically fill in your login details for websites
+                            and apps, this feature not only boosts your security but also saves
+                            time. Beyond password storage and generation many password managers offer
+                            additional features to enhance your security, for instance they can securely store sensitive information like credit
+                            card details, private notes, and even documents. Some password managers will
+                            also notify you if a saved password has been exposed in a data breach prompting you to update it, others offer secure
+                            password sharing allowing you to share account access safely with family, friends, or colleagues without revealing
+                            the actual password. Integrating a password manager into your daily routine can greatly improve both security and
+                            convenience whether built into your web browser, part of your operating system, or a standalone app. A password manager is a
+                            simple but powerful way to manage your digital identity more securely. It encourages good password habits, protects
+                            against common cyber threats, and reduces the chances of unauthorized access to your
+                            accounts.</p>
+
+                            <br>
+                            <h5>Website Security Certificates</h5>
+                            <p>Think of a certificate as a digital ID card for a website, just like you need identification to verify who you are,
+                              websites need certificates to prove their authenticity and ensure secure communication. Imagine you're about to
+                              enter a your website, your web browser checks this certificate to confirm the site's identity like a virtual handshake,
+                              before it establishes a secure connection. These certificates are crucial in safeguarding sensitive data
+                              such as personal information or credit card details from falling into the wrong
+                              hands. So how are certificates acquired, certificates are issued and
+                              managed by trusted thirdparty entities known as certificate authorities or CA,
+                            </p>
+                            <h6>Certificate Authority</h6>
+                              <p>
+                                These CA act as digital notaries verifying the identity and authenticity of a website. When a website owner wants
+                                a certificate they go through a validation process with the CA, the CA will verify the website owner's identity
+                                and domain ownership to ensure they are legitimate, once the validation is successful the CA issues a digital
+                                certificate containing the website's public encryption key and other essential
+                                information. 
+                              </p>
+                              <br>
+                              <ul>
+                                <i>When you access a website using https in the URL your web browser
+                                  recognizes this and checks for a valid certificate. If the certificate is valid and trusted your browser establishes a
+                                  secure encrypted connection with the website server. The lock icon you see in the browser's address bar indicates a
+                                  secure connection, it means your data such as login credentials or credit card information is encrypted while being
+                                  transmitted making it extremely difficult for hackers to intercept or
+                                  decipher.
+                                </i>
+                                <br>
+                                <br>
+                                <p>
+                                  <b>Valid</b> - 
+                                  one that has been issued by a reputable CA and is within its validity date range.
+                                </p>
+                                <p>
+                                  <b>Invalid</b> - 
+                                  raises a red flag. When you encounter an invalid certificate your browser will display a
+                                  warning message like your connection is not private or the security certificate presented by this website has expired or
+                                  is not yet valid this is a safety measure to protect you from potential threats such as fishing attacks, data
+                                  interception, or malware and it is generally best to avoid proceeding to such a website unless you're certain it's
+                                  safe.
+                                </p>
+                                <br>
+                                <i>one common issue that might cause a certificate to appear invalid even though it may be valid is when a
+                                computer's date and time settings are incorrect, if this is the case it can interfere with certificate validation
+                                making it appear as a certificate has expired or is not yet valid even though it may be
+                                fine.</i>
+                              </ul>
+                            </p>
+                            
+                            <br>
+                            <h6>Browser Settings</h6>
+                            <p>Let's be thorough in the
+                              context of a web browser a popup is a small window that appears over the main browser window often showing ads,
+                              notifications, or forms, while some popups are useful many are intrusive and can
+                              even post security risks, this is where pop-up blockers come in.</p>
+                              <ul>
+                                <p><b>Pop-up Blockers</b> - 
+                                  prevent unwanted pop-ups from appearing making your browsing experience less cluttered and more secure. When enabled, a pop-up
+                                  blocker scans the page for scripts that try to generate popups and stops them from appearing. You can also adjust your
+                                  settings to allow popups from trusted websites ensuring that you don't miss important prompts or notifications when
+                                  needed.
+                                </p>
+                                <p><b>Ad Blockers</b> -                                 
+                                  unlike pop-up blockers that Target separate Windows, ad blockers focus on removing ads embedded directly into web
+                                  pages. Ads can be a nuisance but they can also slow down browsing speeds or carry
+                                  malware. By filtering out ad content Ad Blockers enhance both performance and security, just be aware that some
+                                  websites may restrict access if they detect ad blocking software. Adjusting your Ad Blocker settings to allow ad-ons,
+                                  trusted sites can support their content without compromising your
+                                  safety.
+                                </p>
+                                <p><b>History cookies and form data</b> - 
+                                  this can be useful as it makes browsing more convenient like autofilling forms or remembering login details, however,
+                                  storing this data can be risky especially on shared or public computers as it could expose sensitive information.
+                                  Clearing browsing data removes the stored information reducing the chances of someone else accessing it, doing this
+                                  regularly is a good habit to protect your privacy and keep your browser running
+                                  smoothly. 
+                                </p>
+                                <p><b>Cache</b>
+                                  a temporary storage space where your browser saves copies of websites images
+                                  and other resources to make future visits faster but over time cach data
+                                  can become outdated causing websites to load incorrectly or even creating security risks. if sensitive data is
+                                  cached clearing your cache ensures you're seeing the most up-to-date content and minimizes potential privacy risks, it
+                                  also frees up storage space which can improve your devic's performance.
+                                </p>
+                                <p><b>Private Browsing Mode</b> - 
+                                  if you want to prevent your browser from saving any history or data during a session private browsing mode is the way
+                                  to go, also known as incognito mode. This feature stops your browser from storing history cookies or temporary files while
+                                  you browse, this is useful for sensitive activities like logging into a bank account on a shared computer since no
+                                  traces are left behind. After you close the session keep in mind though that private browsing only prevents local
+                                  tracking it won't stop your network administrator or internet service provider from seeing your
+                                  activity.
+                                </p>
+                                <p><b>Browser Data Synchronization</b> - 
+                                  this feature allows you to sync your
+                                  bookmarks, passwords, and browsing history across devices making it easy to access
+                                  your settings no matter where you're browsing from. While this adds convenience it also comes with risks. If
+                                  someone gains access to your browser account they could potentially see sync data from all your
+                                  devices.
+                                </p>
+                              </ul>
+                              </p>
+
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Hardware</title>
+    <style>
+      nav {
+        width: 400%;
+      }
+      body {
+        height: 2000px;
+      }
+      header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+      }
+      #products {
+        padding: 5rem 5rem 0 0;
+      }
+      .section-toggler {
+        display: none;
+      }
+      .simple-list-example {
+        position: sticky;
+        top: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .col-4 {
+          width: 100%;
+        }
+        #products {
+          padding: 1rem;
+        }
+        .simple-list-example {
+          position:relative;
+        }
+        .col-8 {
+          padding: 1rem;
+          margin: 0;
+          width: 100%;
+        }
+        .row {
+          padding: 0;
+          margin: 0;
+          justify-items: center;
+          align-items: center;
+          width: 100%;
+        }
+        .scrollspy-example {
+          width: 100%;
+          margin: auto;
+          justify-items: center;
+        }
+        .section-toggler {
+          display: block;
+        }
+        nav {
+          z-index: 10000000;
+          width: auto;
+        }
+        #SectionDropdown h2 {
+          margin-top: 2.5rem;
+        }
+      }
+  </style>
+      <script>
+        window.onscroll = function(e) {
+          var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+          var header = document.querySelector('#service-header');
+    
+          scrollY <= this.lastScroll
+          ? header.style.visibility = 'visible'
+          : header.style.visibility = 'hidden';
+    
+          this.lastScroll = scrollY ;
+        }
+      </script>
+</head>
+<body>
+    <header id="service-header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">Tyronnes <span style="font-weight: 700;">Services</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#SectionDropdown2" aria-controls="#SectionDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../service.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="networking.html">Networking</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="os.html">Operating Systems</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hardware</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cloud.html">Cloud Computing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="scripting.html">Scripting</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="security.html">Security</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="SectionDropdown2">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-1">Cable Types</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-2">RAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-3">Storage Devices</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-4">Motherboards, CPUs, & Add-on Cards</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-5">Power Supply</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-6">Multifunction Devices/ Printers & Settings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="p-1 rounded" href="#simple-list-item-7">Printer Consumables</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <article id="security-products">
+            <section id="products">
+                <div class="row">
+                    <div class="col-4" id="SectionDropdown">
+                        <div style="position: sticky; top: 100px;" id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+                        <h2>Hardware</h2>  
+                        <a class="p-1 rounded" href="#simple-list-item-1">Cable Types</a>
+                        <a class="p-1 rounded" href="#simple-list-item-2">RAM</a>
+                        <a class="p-1 rounded" href="#simple-list-item-3">Storage Devices</a>
+                        <a class="p-1 rounded" href="#simple-list-item-4">Motherboards, CPUs, & Add-on Cards</a>
+                        <a class="p-1 rounded" href="#simple-list-item-5">Power Supply</a>
+                        <a class="p-1 rounded" href="#simple-list-item-6">Multifunction Devices/ Printers & Settings</a>
+                        <a class="p-1 rounded" href="#simple-list-item-7">Printer Consumables</a>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <br>
+                        <h4 id="simple-list-item-1">Cable Types</h4>
+
+
+                        <h4 id="simple-list-item-2">RAM</h4>
+
+
+                        <h4 id="simple-list-item-3">Storage Devices</h4>
+
+
+                        <h4 id="simple-list-item-4">Motherboards, CPUs, & Add-on Cards</h4>
+
+
+                        <h4 id="simple-list-item-5">Power Supply</h4>
+                        
+                        
+                        <h4 id="simple-list-item-5">Multifunction Devices/ Printers & Settings</h4>
+                        
+                        
+                        <h4 id="simple-list-item-5">Printer Consumables</h4>
+                      </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</html>
