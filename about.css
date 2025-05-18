@@ -1,0 +1,48 @@
+.grid-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 20% 3%;
+    padding: 9% 8% 42%;
+}
+
+.grid-item {
+    display: flex;
+    border-radius: 5%;
+}
+
+.grid-item-txt{
+    background-color: rgb(240, 240, 240);
+    padding: 25px;
+    width: 300px;
+    /* margin: 100px 30px 30px; */
+    /* justify-items: center; */
+}
+
+.grid-item-img img {
+    height: 350px;
+    width: 250px;
+}
+
+.grid-item h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-align: start;
+    font-size: 2.2rem;
+    padding-bottom: 20px;
+}
+
+.grid-item p {
+    color: rgb(80, 80, 80);
+    padding-bottom: 5%;
+}
+
+.grid-item button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: rgb(134, 134, 134);
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgb(158, 158, 158);
+}

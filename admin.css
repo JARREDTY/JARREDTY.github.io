@@ -1,0 +1,115 @@
+section {
+    padding: 8%;
+}
+
+h2 {
+    color: rgb(218, 52, 52);
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+h4 {
+    color: rgb(226, 58, 58);
+    font-size: 1rem;
+    font-weight: 800;
+    padding-bottom: 1.5%;
+}    
+
+#textbox p {
+    font-size: 1rem;
+}
+
+#textbox ol {
+    margin-top: -15px;
+}
+
+#grid-items {
+    /* padding: 4%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#grid-item {
+    padding: 4%;
+    width: 90%;
+}
+
+#flexbox {
+    justify-items: center;
+    align-items: center;
+    display: flex;
+}
+
+#finances p {
+    margin-top: -10px;
+    font-weight: 500;
+}
+
+#admissions h4 {
+    padding-top: 2%;
+}
+
+#admissions p {
+    font-size: 1.1rem;
+}
+
+.grid-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20% 3%;
+    padding: 9% 8% 42%;
+}
+
+.grid-item {
+    display: flex;
+    padding: 10%;
+    background-color: rgb(236, 236, 236);
+}
+
+.grid-item-txt{
+    /* background-color: rgb(240, 240, 240); */
+    padding: 25px;
+    width: 450px;
+    align-items: center;
+    margin: auto;
+}
+
+.grid-item-img img {
+    height: 450px;
+    width: 500px;
+}
+
+.grid-item h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-align: start;
+    font-size: 2.8rem;
+}
+
+.grid-item p {
+    color: rgb(80, 80, 80);
+    padding-bottom: 5%;
+}
+
+.grid-item button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: rgb(226, 64, 64);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgb(158, 158, 158);
+}
+
+#imagelinks {
+    height: 200vh;
+    margin-top: 20%;
+}
